@@ -146,6 +146,7 @@ namespace Lucene.Net.Store
             get => file.length;
             set
             {
+                file.length = value;
             }
         }
 

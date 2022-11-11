@@ -160,6 +160,8 @@ namespace Lucene.Net.Benchmarks.ByTask
             Console.WriteLine("####################");
         }
 
+        private static object ex() => throw new NotImplementedException();
+
         /// <summary>
         /// Returns the algorithm.
         /// </summary>

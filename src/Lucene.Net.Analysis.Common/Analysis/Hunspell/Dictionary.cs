@@ -18,6 +18,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using JCG = J2N.Collections.Generic;
 using Integer = J2N.Numerics.Int32;
+using System.Linq;
 
 namespace Lucene.Net.Analysis.Hunspell
 {
@@ -771,7 +772,7 @@ namespace Lucene.Net.Analysis.Hunspell
             {
                 //encoding = "iso-" + encoding.Substring(3);
 
-                encoding = encoding.Concat("iso-", text.AsSpan(3));
+                encoding = encoding.Concat("iso-", encoding.AsSpan(3));
 
 
 

@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.Util;
 using System;
 using System.Collections.Generic;
@@ -74,7 +74,7 @@ namespace Lucene.Net.Analysis.Cjk
 
         public override TokenStream Create(TokenStream input)
         {
-            return new CJKBigramFilter(input, flags, outputUnigrams);
+            return new CjkBigramFilter(input, flags, outputUnigrams);
         }
     }
 }

@@ -741,7 +741,7 @@ namespace Lucene.Net.Codecs.Memory
                         {
                             return term;
                         }
-                        MoveNext() ? term : null;
+                        _ = MoveNext() ? term : null;
 
 
                     }

@@ -95,7 +95,7 @@ namespace Lucene.Net.Analysis.Cjk
                 // run the widthfilter first before bigramming, it sometimes combines characters.
                 TokenStream result = new CjkWidthFilter(source);
                 result = new LowerCaseFilter(m_matchVersion, result);
-                result = new CJKBigramFilter(result);
+                result = new CjkBigramFilter(result);
                 return new TokenStreamComponents(source, new StopFilter(m_matchVersion, result, m_stopwords));
             }
             else

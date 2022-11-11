@@ -115,6 +115,8 @@ namespace Lucene.Net.Util
             Dispose(objects);
         }
 
+        private static void Dispose(IEnumerable<IDisposable> objects) => throw new NotImplementedException();
+
         /// <summary>
         /// Disposes all given <see cref="IDisposable"/>s, suppressing all thrown exceptions.
         /// Some of the <see cref="IDisposable"/>s may be <c>null</c>, they are ignored.
@@ -274,10 +276,14 @@ namespace Lucene.Net.Util
         }
 
         /// <summary>
-        /// Disposes all given <see cref="IDisposable"/>s. </summary>
-        /// <seealso cref="Dispose(IDisposable[])"/>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void Dispose(IEnumerable<IDisposable> objects)
+        // Disposes all given <see cref="IDisposable"/>s. </summary>
+        // <seealso cref="Dispose(IDisposable[])"/>
+
+    public class GarbageDisposal : IDisposable
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+
+            public static void Dispose(IEnumerable<IDisposable> objects)
         {
             Exception th = null;
 
@@ -302,6 +308,10 @@ namespace Lucene.Net.Util
 
             ReThrow(th);
         }
+
+            public void Dispose() => throw new NotImplementedException();
+        }
+
 
         /// <summary>
         /// Disposes all given <see cref="IDisposable"/>s, suppressing all thrown exceptions.
