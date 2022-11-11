@@ -42,7 +42,7 @@ namespace Lucene.Net.Analysis.Cjk
         HANGUL = 8,
         /// <summary>
         /// bigram flag for all scripts </summary>
-        ALL = 0xffff,
+        ALL = HAN| HIRAGANA| KATAKANA| HANGUL
     }
 
     /// <summary>
