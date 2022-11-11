@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.Standard;
 using NUnit.Framework;
 using System;
@@ -27,13 +27,13 @@ namespace Lucene.Net.Analysis.Cjk
         internal static readonly Analyzer analyzer = Analyzer.NewAnonymous(createComponents: (fieldName, reader) =>
         {
             Tokenizer t = new StandardTokenizer(TEST_VERSION_CURRENT, reader);
-            return new TokenStreamComponents(t, new CJKBigramFilter(t));
+            return new TokenStreamComponents(t, new CjkBigramFilter(t));
         });
 
         internal static readonly Analyzer unibiAnalyzer = Analyzer.NewAnonymous(createComponents: (fieldName, reader) =>
         {
             Tokenizer t = new StandardTokenizer(TEST_VERSION_CURRENT, reader);
-            return new TokenStreamComponents(t, new CJKBigramFilter(t, (CJKScript)0xff, true));
+            return new TokenStreamComponents(t, new CjkBigramFilter(t, (CJKScript)0xff, true));
         });
 
         [Test]
@@ -48,7 +48,7 @@ namespace Lucene.Net.Analysis.Cjk
             Analyzer a = Analyzer.NewAnonymous(createComponents: (fieldName, reader) =>
             {
                 Tokenizer t = new StandardTokenizer(TEST_VERSION_CURRENT, reader);
-                return new TokenStreamComponents(t, new CJKBigramFilter(t, CJKScript.HAN));
+                return new TokenStreamComponents(t, new CjkBigramFilter(t, CJKScript.HAN));
             });
             AssertAnalyzesTo(a, "多くの学生が試験に落ちた。", new string[] { "多", "く", "の", "学生", "が", "試験", "に", "落", "ち", "た" }, new int[] { 0, 1, 2, 3, 5, 6, 8, 9, 10, 11 }, new int[] { 1, 2, 3, 5, 6, 8, 9, 10, 11, 12 }, new string[] { "<SINGLE>", "<HIRAGANA>", "<HIRAGANA>", "<DOUBLE>", "<HIRAGANA>", "<DOUBLE>", "<HIRAGANA>", "<SINGLE>", "<HIRAGANA>", "<HIRAGANA>", "<SINGLE>" }, new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }, new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 });
         }
@@ -59,7 +59,7 @@ namespace Lucene.Net.Analysis.Cjk
             Analyzer a = Analyzer.NewAnonymous(createComponents: (fieldName, reader) =>
             {
                 Tokenizer t = new StandardTokenizer(TEST_VERSION_CURRENT, reader);
-                return new TokenStreamComponents(t, new CJKBigramFilter(t, (CJKScript)0xff, false));
+                return new TokenStreamComponents(t, new CjkBigramFilter(t, (CJKScript)0xff, false));
             });
             AssertAnalyzesTo(a, "多くの学生が試験に落ちた。", new string[] { "多く", "くの", "の学", "学生", "生が", "が試", "試験", "験に", "に落", "落ち", "ちた" });
         }
@@ -76,7 +76,7 @@ namespace Lucene.Net.Analysis.Cjk
             Analyzer a = Analyzer.NewAnonymous(createComponents: (fieldName, reader) =>
             {
                 Tokenizer t = new StandardTokenizer(TEST_VERSION_CURRENT, reader);
-                return new TokenStreamComponents(t, new CJKBigramFilter(t, CJKScript.HAN, true));
+                return new TokenStreamComponents(t, new CjkBigramFilter(t, CJKScript.HAN, true));
             });
             AssertAnalyzesTo(a, "多くの学生が試験に落ちた。", new string[] { "多", "く", "の", "学", "学生", "生", "が", "試", "試験", "験", "に", "落", "ち", "た" }, new int[] { 0, 1, 2, 3, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11 }, new int[] { 1, 2, 3, 4, 5, 5, 6, 7, 8, 8, 9, 10, 11, 12 }, new string[] { "<SINGLE>", "<HIRAGANA>", "<HIRAGANA>", "<SINGLE>", "<DOUBLE>", "<SINGLE>", "<HIRAGANA>", "<SINGLE>", "<DOUBLE>", "<SINGLE>", "<HIRAGANA>", "<SINGLE>", "<HIRAGANA>", "<HIRAGANA>", "<SINGLE>" }, new int[] { 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1 }, new int[] { 1, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1 });
         }

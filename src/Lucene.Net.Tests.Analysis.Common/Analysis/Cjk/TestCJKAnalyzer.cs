@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.CharFilters;
 using Lucene.Net.Analysis.Core;
 using Lucene.Net.Analysis.Standard;
@@ -138,7 +138,7 @@ namespace Lucene.Net.Analysis.Cjk
             Analyzer analyzer = Analyzer.NewAnonymous(createComponents: (fieldName, reader) =>
             {
                 Tokenizer tokenizer = new StandardTokenizer(TEST_VERSION_CURRENT, reader);
-                return new TokenStreamComponents(tokenizer, new CJKBigramFilter(tokenizer));
+                return new TokenStreamComponents(tokenizer, new CjkBigramFilter(tokenizer));
             }, initReader: (fieldName, reader) => new MappingCharFilter(norm, reader));
 
             AssertAnalyzesTo(analyzer, "ab", new string[] { "一二", "二二", "二三" }, new int[] { 0, 0, 1 }, new int[] { 1, 1, 2 });
@@ -181,7 +181,7 @@ namespace Lucene.Net.Analysis.Cjk
                 Tokenizer tokenizer = new MockTokenizer(reader, MockTokenizer.WHITESPACE, false);
                 TokenFilter filter = new FakeStandardTokenizer(tokenizer);
                 filter = new StopFilter(TEST_VERSION_CURRENT, filter, CharArraySet.EMPTY_SET);
-                filter = new CJKBigramFilter(filter);
+                filter = new CjkBigramFilter(filter);
                 return new TokenStreamComponents(tokenizer, filter);
             });
 
@@ -211,7 +211,7 @@ namespace Lucene.Net.Analysis.Cjk
             Analyzer a = Analyzer.NewAnonymous(createComponents: (fieldName, reader) =>
             {
                 Tokenizer tokenizer = new KeywordTokenizer(reader);
-                return new TokenStreamComponents(tokenizer, new CJKBigramFilter(tokenizer));
+                return new TokenStreamComponents(tokenizer, new CjkBigramFilter(tokenizer));
             });
             CheckOneTerm(a, "", "");
         }

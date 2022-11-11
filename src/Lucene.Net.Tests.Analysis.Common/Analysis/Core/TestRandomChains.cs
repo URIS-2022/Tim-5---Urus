@@ -131,7 +131,7 @@ namespace Lucene.Net.Analysis.Core
                     // TODO: it seems to mess up offsets!?
                     typeof(WikipediaTokenizer),
                     // TODO: doesn't handle graph inputs
-                    typeof(CJKBigramFilter),
+                    typeof(CjkBigramFilter),
                     // TODO: doesn't handle graph inputs (or even look at positionIncrement)
                     typeof(HyphenatedWordsFilter),
                     // TODO: LUCENE-4983
