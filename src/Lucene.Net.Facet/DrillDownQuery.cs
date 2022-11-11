@@ -172,7 +172,7 @@ namespace Lucene.Net.Facet
                 index++;
             }
             ConstantScoreQuery q = (ConstantScoreQuery)query.GetClauses()[index].Query;
-            if ((q.Query is BooleanQuery) == false)
+            if (q.Query is BooleanQuery) 
             {
                 // App called .add(dim, customQuery) and then tried to
                 // merge a facet label in:

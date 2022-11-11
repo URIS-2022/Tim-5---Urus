@@ -39,11 +39,11 @@ namespace Lucene.Net.Expressions
             this.scorer = scorer;
         }
 
-        public override double DoubleVal(int document)
+        public override double DoubleVal(int doc)
         {
             try
             {
-                if (Debugging.AssertsEnabled) Debugging.Assert(document == scorer.DocID);
+                if (Debugging.AssertsEnabled) Debugging.Assert(doc == scorer.DocID);
 
                 // LUCENENET specific: The explicit cast to float is required here to prevent us from losing precision on x86 .NET Framework with optimizations enabled
                 return (float)scorer.GetScore();

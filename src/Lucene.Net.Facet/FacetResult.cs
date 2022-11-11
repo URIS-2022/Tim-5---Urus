@@ -137,7 +137,7 @@ namespace Lucene.Net.Facet
             return sb.ToString();
         }
 
-        string IFormattable.ToString(string? format, IFormatProvider? provider) => ToString(provider);
+        string IFormattable.ToString(string? format, IFormatProvider? formatProvider) => ToString(formatProvider);
 
         public override bool Equals(object? other)
         {

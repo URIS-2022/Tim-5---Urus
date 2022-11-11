@@ -89,7 +89,7 @@ namespace Lucene.Net.Facet.Range
             if (!maxInclusive)
             {
                 // Why no Math.nextDown?
-                maxIn = maxIn -= EPSILON;
+                maxIn -= EPSILON;
             }
 
             if (minIn > maxIn)

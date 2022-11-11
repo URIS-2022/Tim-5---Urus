@@ -405,7 +405,7 @@ namespace Lucene.Net.Facet
                     }
                     if (baseDocID == ddDocID)
                     {
-                        //if (DEBUG) {
+                        
                         //  System.out.println("    keep docID=" + ddDocID + " id=" + context.reader().document(ddDocID).get("id"));
                         //}
                         scores[slot0] = baseScorer.GetScore();

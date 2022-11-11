@@ -966,7 +966,7 @@ loop2_break: {/* LUCENENET: intentionally blank */}
                         {
                             int alt4 = 2;
                             int LA4_0 = input.LA(1);
-                            if (((LA4_0 >= '0' && LA4_0 <= '9')))
+                            if (LA4_0 >= '0' && LA4_0 <= '9')
                             {
                                 alt4 = 1;
                             }
@@ -2145,12 +2145,12 @@ loop2_break: {/* LUCENENET: intentionally blank */}
         private static short[][] LoadDFA9Transition() // LUCENENET: Avoid static constructors (see https://github.com/apache/lucenenet/pull/224#issuecomment-469284006)
         {
             int numStates = DFA9_transitionS.Length;
-            var DFA9_transition = new short[numStates][];
+            var DFA9_transition_new = new short[numStates][];
             for (int i = 0; i < numStates; i++)
             {
-                DFA9_transition[i] = DFA.UnpackEncodedString(DFA9_transitionS[i]);
+                DFA9_transition_new[i] = DFA.UnpackEncodedString(DFA9_transitionS[i]);
             }
-            return DFA9_transition;
+            return DFA9_transition_new;
         }
 
         protected class DFA9 : DFA

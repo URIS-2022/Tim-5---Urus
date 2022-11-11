@@ -205,17 +205,17 @@ namespace Lucene.Net.Facet.Range
                         this.outerInstance = outerInstance;
                     }
 
-                    public bool Get(int docID)
+                    public bool Get(int index)
                     {
-                        if (outerInstance.acceptDocs != null && outerInstance.acceptDocs.Get(docID) == false)
+                        if (outerInstance.acceptDocs != null && outerInstance.acceptDocs.Get(index) == false)
                         {
                             return false;
                         }
-                        if (outerInstance.fastMatchBits != null && outerInstance.fastMatchBits.Get(docID) == false)
+                        if (outerInstance.fastMatchBits != null && outerInstance.fastMatchBits.Get(index) == false)
                         {
                             return false;
                         }
-                        return outerInstance.outerInstance.outerInstance.Accept(outerInstance.values.Int64Val(docID));
+                        return outerInstance.outerInstance.outerInstance.Accept(outerInstance.values.Int64Val(index));
                     }
 
 

@@ -51,7 +51,7 @@ namespace Lucene.Net.Facet.Taxonomy.Directory
         /// <summary>
         /// LUCENENET specific class to make an <see cref="int"/> type into a reference type.
         /// </summary>
-        private class Int32Class
+        private sealed class Int32Class
         {
             /// <summary>
             /// NOTE: This was intItem (field) in Lucene

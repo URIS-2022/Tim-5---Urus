@@ -522,10 +522,7 @@ namespace Lucene.Net.Expressions.JS
                                     break;
                                 }
 
-                            default:
-                                {
-                                    goto loop2_break;
-                                }
+                            
                         }
                     //loop2_continue: // LUCENENET NOTE: Not used
                     }
@@ -1538,7 +1535,7 @@ namespace Lucene.Net.Expressions.JS
 
 
         // $ANTLR start "primary"
-        // src/java/org/apache/lucene/expressions/js/Javascript.g:315:1: primary : ( NAMESPACE_ID | numeric | AT_LPAREN ! conditional AT_RPAREN !);
+    
 
         public AstParserRuleReturnScope<ITree, IToken> Primary()
         {
