@@ -31624,10 +31624,10 @@ namespace Lucene.Net.Analysis.CharFilters
                             { // 10FFFF: max 6 hex chars
                                 // LUCENENET: Originally, we got the value of new string(zzBuffer, zzStartRead, zzMarkedPos - zzStartRead), which allocates.
                                 // We can eliminate the allocation by grabbing the values YyText converts to a string via index and length.
-                                if (!Integer.TryParse(zzBuffer, zzStartRead + 1, matchLength - 1, radix: 16, out int codePoint))
-                                {
-                                    if (Debugging.AssertsEnabled) Debugging.Assert(false, "Exception parsing hex code point '{0}'", new CharArrayFormatter(zzBuffer, zzStartRead + 1, matchLength - 1));
-                                }
+                                if (!Integer.TryParse(zzBuffer, zzStartRead + 1, matchLength - 1, radix: 16, out int codePoint) && Debugging.AssertsEnabled) Debugging.Assert(false, "Exception parsing hex code point '{0}'", new CharArrayFormatter(zzBuffer, zzStartRead + 1, matchLength - 1));
+                                
+                                  
+                                
                                 if (codePoint <= 0x10FFFF)
                                 {
                                     outputSegment = entitySegment;

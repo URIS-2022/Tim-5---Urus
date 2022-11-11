@@ -1,4 +1,4 @@
-using Lucene.Net.Index;
+﻿using Lucene.Net.Index;
 using Lucene.Net.Search;
 using System;
 using System.Collections.Generic;
@@ -48,7 +48,7 @@ namespace Lucene.Net.Expressions
             this.bindings = bindings;
         }
 
-        private class FakeScorer : Scorer
+        private sealed class FakeScorer : Scorer
         {
             internal float score;
             internal int doc = -1;

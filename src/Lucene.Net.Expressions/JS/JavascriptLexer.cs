@@ -166,6 +166,7 @@ namespace Lucene.Net.Expressions.JS
             finally
             {
             }
+            
         }
 
         // do for sure before leaving
@@ -2173,7 +2174,7 @@ loop2_break: {/* LUCENENET: intentionally blank */}
                 => "346:1: DECIMAL : ( DECIMALINTEGER AT_DOT ( DECIMALDIGIT )* ( EXPONENT )? | AT_DOT ( DECIMALDIGIT )+ ( EXPONENT )? | DECIMALINTEGER ( EXPONENT )? );";
 
 #pragma warning disable IDE0052 // Remove unread private members
-            private readonly JavascriptLexer _enclosing;
+            public readonly JavascriptLexer _enclosing;
 #pragma warning restore IDE0052 // Remove unread private members
         }
     }
