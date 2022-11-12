@@ -1,6 +1,7 @@
 ﻿// Lucene version compatibility level 4.8.1
 using System;
 using System.Globalization;
+using System.Text;
 
 namespace Lucene.Net.Analysis.Br
 {
@@ -262,7 +263,8 @@ namespace Lucene.Net.Analysis.Br
         private static string ChangeTerm(string value) // LUCENENET: CA1822: Mark members as static
         {
             int j;
-            string r = "";
+            //string r = "";
+            StringBuilder bld = new StringBuilder();
 
             // be-safe !!!
             if (value is null)
@@ -275,43 +277,43 @@ namespace Lucene.Net.Analysis.Br
             {
                 if ((value[j] == 'á') || (value[j] == 'â') || (value[j] == 'ã'))
                 {
-                    r = r + "a";
+                    bld.Append("a");
                     continue;
                 }
                 if ((value[j] == 'é') || (value[j] == 'ê'))
                 {
-                    r = r + "e";
+                    bld.Append("e");
                     continue;
                 }
                 if (value[j] == 'í')
                 {
-                    r = r + "i";
+                    bld.Append("i");
                     continue;
                 }
                 if ((value[j] == 'ó') || (value[j] == 'ô') || (value[j] == 'õ'))
                 {
-                    r = r + "o";
+                    bld.Append("o");
                     continue;
                 }
                 if ((value[j] == 'ú') || (value[j] == 'ü'))
                 {
-                    r = r + "u";
+                    bld.Append("u");
                     continue;
                 }
                 if (value[j] == 'ç')
                 {
-                    r = r + "c";
+                    bld.Append("c");
                     continue;
                 }
                 if (value[j] == 'ñ')
                 {
-                    r = r + "n";
+                    bld.Append("n");
                     continue;
                 }
 
-                r = r + value[j];
+                bld.Append(value[j]);
             }
-
+            string r = bld.ToString();
             return r;
         }
 
