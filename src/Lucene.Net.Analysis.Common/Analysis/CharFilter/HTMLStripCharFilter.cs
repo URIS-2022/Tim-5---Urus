@@ -30896,7 +30896,19 @@ namespace Lucene.Net.Analysis.CharFilters
                 if (ch == -1) break;
                 cbuf[off++] = (char)ch;
             }
-            return i > 0 ? i : (len == 0 ? 0 : -1);
+           return i > 0 ? i : (len == 0 ? 0 : -1);
+         /*  if(i > 0)
+            {
+                return i;
+                if(len ==0)
+                {
+                    return i == 0;
+                }
+                else if (len != 0)
+                {
+                    return i == -1;
+                }    
+            }*/
         }
 
         protected override void Dispose(bool disposing)
