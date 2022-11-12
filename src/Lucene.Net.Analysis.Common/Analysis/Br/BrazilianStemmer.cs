@@ -277,37 +277,37 @@ namespace Lucene.Net.Analysis.Br
             {
                 if ((value[j] == 'á') || (value[j] == 'â') || (value[j] == 'ã'))
                 {
-                    bld.Append("a");
+                    bld.Append('a');
                     continue;
                 }
                 if ((value[j] == 'é') || (value[j] == 'ê'))
                 {
-                    bld.Append("e");
+                    bld.Append('e');
                     continue;
                 }
                 if (value[j] == 'í')
                 {
-                    bld.Append("i");
+                    bld.Append('i');
                     continue;
                 }
                 if ((value[j] == 'ó') || (value[j] == 'ô') || (value[j] == 'õ'))
                 {
-                    bld.Append("o");
+                    bld.Append('o');
                     continue;
                 }
                 if ((value[j] == 'ú') || (value[j] == 'ü'))
                 {
-                    bld.Append("u");
+                    bld.Append('u');
                     continue;
                 }
                 if (value[j] == 'ç')
                 {
-                    bld.Append("c");
+                    bld.Append('c');
                     continue;
                 }
                 if (value[j] == 'ñ')
                 {
-                    bld.Append("n");
+                    bld.Append('n');
                     continue;
                 }
 
