@@ -165,6 +165,8 @@ namespace Lucene.Net.Expressions.JS
             }
             finally
             {
+                Console.WriteLine(state.type);
+                Console.WriteLine(state.channel);
             }
             
         }
