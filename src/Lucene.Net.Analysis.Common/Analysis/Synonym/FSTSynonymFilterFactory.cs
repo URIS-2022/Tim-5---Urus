@@ -39,7 +39,7 @@ namespace Lucene.Net.Analysis.Synonym
         private SynonymMap map;
 
         // LUCENENET: Optimized by pre-comiling regex and lazy-loading
-        private class Holder
+        private static class Holder
         {
             public static readonly Regex TOKENIZER_FACTORY_REPLACEMENT_PATTERN = new Regex("^tokenizerFactory\\.", RegexOptions.Compiled);
         }

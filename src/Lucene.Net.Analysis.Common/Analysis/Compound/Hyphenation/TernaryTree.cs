@@ -562,7 +562,6 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
 
                 // LUCENENET: This constructor is unnecessary
                 //public Item()
-                //{
                 //    parent = (char)0;
                 //    child = (char)0;
                 //}

@@ -327,7 +327,6 @@ namespace Lucene.Net.Analysis.CharFilters
         private static int[] ZzUnpackAction()
         {
             int[] result = new int[14873];
-            int offset = 0;
             
             return result;
         }
@@ -30795,7 +30794,7 @@ namespace Lucene.Net.Analysis.CharFilters
         private int inputStart;
         private int cumulativeDiff;
         private bool escapeBR = false;
-        private bool escapeSCRIPT = false;
+        private readonly bool escapeSCRIPT = false;
         private bool escapeSTYLE = false;
         private int restoreState;
         private int previousRestoreState;
