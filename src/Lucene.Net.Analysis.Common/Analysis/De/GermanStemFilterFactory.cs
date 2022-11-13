@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.Util;
 using System;
 using System.Collections.Generic;
@@ -46,9 +46,9 @@ namespace Lucene.Net.Analysis.De
             }
         }
 
-        public override TokenStream Create(TokenStream @in)
+        public override TokenStream Create(TokenStream @input)
         {
-            return new GermanStemFilter(@in);
+            return new GermanStemFilter(@input);
         }
     }
 }

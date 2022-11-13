@@ -30925,7 +30925,7 @@ namespace Lucene.Net.Analysis.CharFilters
             // Package private, for testing purposes
             ZZ_BUFFERSIZE;
 
-        private class TextSegment : OpenStringBuilder
+        private sealed class TextSegment : OpenStringBuilder
         {
             /// <summary>
             /// The position from which the next char will be read.
@@ -31120,11 +31120,7 @@ namespace Lucene.Net.Analysis.CharFilters
         /// </summary>
         /// <param name="pos">the position of the character to fetch. A value from 0 to YyLength()-1.</param>
         /// <returns>the character at position pos</returns>
-        private char YyCharAt(int pos)
-        {
-            return zzBuffer[zzStartRead + pos];
-        }
-
+     
 
         /// <summary>
         /// Returns the length of the matched text region.
