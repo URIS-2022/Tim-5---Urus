@@ -31112,7 +31112,6 @@ namespace Lucene.Net.Analysis.CharFilters
         ///// Returns the text matched by the current regular expression.
         ///// </summary>
         ///// <returns>Returns the text matched by the current regular expression.</returns>
-        //private string YyText => new string(zzBuffer, zzStartRead, zzMarkedPos - zzStartRead);
 
         /// <summary>
         /// Returns the character at position <tt>pos</tt> from the 
