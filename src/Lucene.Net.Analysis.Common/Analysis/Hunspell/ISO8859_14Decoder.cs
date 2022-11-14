@@ -94,10 +94,11 @@ namespace Lucene.Net.Analysis.Hunspell
 
         public override int GetCharCount(byte[] bytes, int index, int count)
         {
+        {
             return count;
         }
 
-        public override int GetChars(byte[] bytesIn, int byteIndex, int byteCount, char[] charsOut, int charIndex)
+        public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex)
         {
             int writeCount = 0;
             int charPointer = charIndex;
