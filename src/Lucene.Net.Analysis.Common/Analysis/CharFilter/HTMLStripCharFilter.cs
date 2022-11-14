@@ -31580,7 +31580,7 @@ namespace Lucene.Net.Analysis.CharFilters
                             if (inputSegment.Length > 2)
                             { // Chars between "<!" and "--" - this is not a comment
                                 // LUCENENET: Originally, we got the value of YyText property, which allocates. We can eliminate the allocation
-                                // by grabbing the values YyText converts to a string: new string(zzBuffer, zzStartRead, zzMarkedPos - zzStartRead);
+                                
                                 inputSegment.Append(zzBuffer, zzStartRead, zzMarkedPos - zzStartRead);
                             }
                             else

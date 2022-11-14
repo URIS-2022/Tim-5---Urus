@@ -31,7 +31,7 @@ namespace Lucene.Net.Analysis.Cjk
     /// <see cref="LowerCaseFilter"/>, forms bigrams of CJK with <see cref="CJKBigramFilter"/>,
     /// and filters stopwords with <see cref="StopFilter"/>
     /// </summary>
-    public sealed class CJKAnalyzer : StopwordAnalyzerBase
+    public sealed class CjkAnalyzer : StopwordAnalyzerBase
     {
         /// <summary>
         /// File containing default CJK stopwords.
@@ -54,7 +54,7 @@ namespace Lucene.Net.Analysis.Cjk
             {
                 try
                 {
-                    return LoadStopwordSet(false, typeof(CJKAnalyzer), DEFAULT_STOPWORD_FILE, "#").AsReadOnly(); // LUCENENET: Made readonly as stated in the docs: https://github.com/apache/lucene/issues/11866
+                    return LoadStopwordSet(false, typeof(CjkAnalyzer), DEFAULT_STOPWORD_FILE, "#").AsReadOnly(); // LUCENENET: Made readonly as stated in the docs: https://github.com/apache/lucene/issues/11866
                 }
                 catch (Exception ex) when (ex.IsIOException())
                 {
@@ -68,7 +68,7 @@ namespace Lucene.Net.Analysis.Cjk
         /// <summary>
         /// Builds an analyzer which removes words in <see cref="DefaultStopSet"/>.
         /// </summary>
-        public CJKAnalyzer(LuceneVersion matchVersion)
+        public CjkAnalyzer(LuceneVersion matchVersion)
               : this(matchVersion, DefaultSetHolder.DEFAULT_STOP_SET)
         {
         }
@@ -80,7 +80,7 @@ namespace Lucene.Net.Analysis.Cjk
         ///          lucene compatibility version </param>
         /// <param name="stopwords">
         ///          a stopword set </param>
-        public CJKAnalyzer(LuceneVersion matchVersion, CharArraySet stopwords)
+        public CjkAnalyzer(LuceneVersion matchVersion, CharArraySet stopwords)
               : base(matchVersion, stopwords)
         {
         }
