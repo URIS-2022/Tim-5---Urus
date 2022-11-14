@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 /*
 Copyright © 2003,
 Center for Intelligent Information Retrieval,
@@ -47,7 +47,7 @@ namespace Lucene.Net.Analysis.En
         private KStemData4()
         {
         }
-        internal static string[] data = new string[] {
+        internal static readonly string[] data = new string[] {
             "granular","granulate","granule","grape","grapefruit",
             "grapeshot","grapevine","graph","graphic","graphical",
             "graphically","graphite","graphology","grapnel","grapple",

@@ -568,7 +568,7 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
         /// <param name="ivalue"> interletter weight values indicating the desirability and
         ///        priority of hyphenating at a given point within the pattern. It
         ///        should contain only digit characters. (i.e. '0' to '9'). </param>
-        public virtual void AddPattern(string pattern, string ivalue)
+        public virtual void AddPattern(string pattern, string values)
         {
             int k = ivalues.Find(ivalue);
             if (k <= 0)

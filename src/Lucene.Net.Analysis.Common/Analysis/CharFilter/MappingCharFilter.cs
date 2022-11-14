@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.Util;
 using Lucene.Net.Diagnostics;
 using Lucene.Net.Util;
@@ -223,7 +223,7 @@ namespace Lucene.Net.Analysis.CharFilters
             }
         }
 
-        public override int Read(char[] cbuf, int off, int len)
+        public override int Read(char[] buffer, int index, int coun)
         {
             int numRead = 0;
             for (int i = off; i < off + len; i++)

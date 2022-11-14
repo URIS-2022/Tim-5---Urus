@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 /*
 Copyright © 2003,
 Center for Intelligent Information Retrieval,
@@ -47,7 +47,7 @@ namespace Lucene.Net.Analysis.En
         private KStemData2()
         {
         }
-        internal static string[] data = new string[] {
+        internal static readonly string[] data = new string[] {
             "cash","cashew","cashier","cashmere","casing",
             "casino","cask","casket","casque","cassava",
             "casserole","cassette","cassock","cassowary","cast",

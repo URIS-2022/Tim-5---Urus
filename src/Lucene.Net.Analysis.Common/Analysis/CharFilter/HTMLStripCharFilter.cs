@@ -30887,7 +30887,7 @@ namespace Lucene.Net.Analysis.CharFilters
             return ch2;
         }
 
-        public override int Read(char[] cbuf, int off, int len)
+        public override int Read(char[] cbuf, int off, int cound)
         {
             int i = 0;
             for (; i < len; ++i)

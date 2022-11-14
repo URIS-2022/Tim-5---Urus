@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 /*
 Copyright © 2003,
 Center for Intelligent Information Retrieval,
@@ -49,7 +49,7 @@ namespace Lucene.Net.Analysis.En
         {
         }
         // KStemData1 ... KStemData8 are created from "head_word_list.txt"
-        internal static string[] data = new string[] {
+        internal static readonly string[] data = new string[] {
             "aback","abacus","abandon","abandoned","abase",
             "abash","abate","abattoir","abbess","abbey",
             "abbot","abbreviate","abbreviation","abc","abdicate",
