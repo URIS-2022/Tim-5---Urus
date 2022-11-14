@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.Util;
 
 namespace Lucene.Net.Analysis.Bg
@@ -96,12 +96,9 @@ namespace Lucene.Net.Analysis.Bg
                 return len - 3;
             }
 
-            if (len > 5)
-            {
-                if (StemmerUtil.EndsWith(s, len, "ът") || StemmerUtil.EndsWith(s, len, "то") || StemmerUtil.EndsWith(s, len, "те") || StemmerUtil.EndsWith(s, len, "та") || StemmerUtil.EndsWith(s, len, "ия"))
-                {
-                    return len - 2;
-                }
+            if (len > 5 && StemmerUtil.EndsWith(s, len, "ът") || StemmerUtil.EndsWith(s, len, "то") || StemmerUtil.EndsWith(s, len, "те") || StemmerUtil.EndsWith(s, len, "та") || StemmerUtil.EndsWith(s, len, "ия"))
+            {   
+                    return len - 2;     
             }
 
             if (len > 4 && StemmerUtil.EndsWith(s, len, "ят"))

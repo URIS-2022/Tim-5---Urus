@@ -928,12 +928,12 @@ namespace Lucene.Net.Analysis.En
                 k = j + 1;
 
                 DictEntry entry = WordInDict();
-                if (entry != null)
+                if (entry != null && !entry.exception)
                 {
-                    if (!entry.exception) // if it's in the dictionary and not an exception
-                    {
+                    //if (!entry.exception) // if it's in the dictionary and not an exception
+                   // {
                         return;
-                    }
+                   // }
                 }
 
                 /* adding on the `e' didn't work, so remove it */
@@ -1909,7 +1909,6 @@ namespace Lucene.Net.Analysis.En
             matchedEntry = null;
 
             //*
-            // lookups.clear(); lookups.add(word.toString());
             // **
 
 

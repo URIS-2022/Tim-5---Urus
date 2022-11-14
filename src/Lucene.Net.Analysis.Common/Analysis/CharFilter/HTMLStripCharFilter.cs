@@ -327,7 +327,6 @@ namespace Lucene.Net.Analysis.CharFilters
         private static int[] ZzUnpackAction()
         {
             int[] result = new int[14873];
-            int offset = 0;
             
             return result;
         }
@@ -30795,7 +30794,7 @@ namespace Lucene.Net.Analysis.CharFilters
         private int inputStart;
         private int cumulativeDiff;
         private bool escapeBR = false;
-        private bool escapeSCRIPT = false;
+        private readonly bool escapeSCRIPT = false;
         private bool escapeSTYLE = false;
         private int restoreState;
         private int previousRestoreState;
@@ -30925,7 +30924,7 @@ namespace Lucene.Net.Analysis.CharFilters
             // Package private, for testing purposes
             ZZ_BUFFERSIZE;
 
-        private class TextSegment : OpenStringBuilder
+        private sealed class TextSegment : OpenStringBuilder
         {
             /// <summary>
             /// The position from which the next char will be read.
@@ -31119,11 +31118,7 @@ namespace Lucene.Net.Analysis.CharFilters
         /// </summary>
         /// <param name="pos">the position of the character to fetch. A value from 0 to YyLength()-1.</param>
         /// <returns>the character at position pos</returns>
-        private char YyCharAt(int pos)
-        {
-            return zzBuffer[zzStartRead + pos];
-        }
-
+     
 
         /// <summary>
         /// Returns the length of the matched text region.
@@ -31900,7 +31895,6 @@ namespace Lucene.Net.Analysis.CharFilters
                             int highSurrogate = '\u0000'; // LUCENENET: Use int to allow out parameters to use without casting.
 
                             // LUCENENET: Originally, we got the value of YyText property, which allocates. We can eliminate the allocation
-                            // by grabbing the values YyText converts to a string: new string(zzBuffer, zzStartRead, zzMarkedPos - zzStartRead);
                             int startIndex = zzStartRead + 2;
                             int length = 4; // (6 - 2)
 

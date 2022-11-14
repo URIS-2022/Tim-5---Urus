@@ -279,7 +279,7 @@ namespace Lucene.Net.Analysis.Standard
             return result;
         }
 
-        private static int ZzUnpackAction(string packed, int offset, int[] result)
+        private static void ZzUnpackAction(string packed, int offset, int[] result)
         {
             int i = 0;       /* index in packed string  */
             int j = offset;  /* index in unpacked array */
@@ -290,7 +290,7 @@ namespace Lucene.Net.Analysis.Standard
                 int value = packed[i++];
                 do result[j++] = value; while (--count > 0);
             }
-            return j;
+            //return j;
         }
 
 

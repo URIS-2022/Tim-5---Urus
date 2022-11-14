@@ -139,7 +139,7 @@ namespace Lucene.Net.Analysis.Ar
             TokenStream result = new LowerCaseFilter(m_matchVersion, source);
             // the order here is important: the stopword list is not normalized!
             result = new StopFilter(m_matchVersion, result, m_stopwords);
-            // TODO maybe we should make ArabicNormalization filter also KeywordAttribute aware?!
+            // maybe we should make ArabicNormalization filter also KeywordAttribute aware?!
             result = new ArabicNormalizationFilter(result);
             if (stemExclusionSet.Count > 0)
             {
