@@ -593,7 +593,7 @@ namespace Lucene.Net.Analysis.Shingle
             {
                 this.outerInstance = shingleFilter;
                 minValue = shingleFilter.outputUnigrams ? 1 : shingleFilter.minShingleSize;
-                Reset();
+                
             }
 
             /// <returns> the current value. </returns>
