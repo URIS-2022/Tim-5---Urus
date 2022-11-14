@@ -777,30 +777,12 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
         {
             @out.WriteLine("Number of keys = " + Convert.ToString(m_length)); // LUCENENET: Intentionally using current culture
             @out.WriteLine("Node count = " + Convert.ToString(m_freenode)); // LUCENENET: Intentionally using current culture
-            // System.out.println("Array length = " + Integer.toString(eq.length));
+            
             @out.WriteLine("Key Array length = " + Convert.ToString(m_kv.Length)); // LUCENENET: Intentionally using current culture
 
-            /*
-             * for(int i=0; i<kv.length(); i++) if ( kv.get(i) != 0 )
-             * System.out.print(kv.get(i)); else System.out.println("");
-             * System.out.println("Keys:"); for(Enumeration enum = keys();
-             * enum.hasMoreElements(); ) System.out.println(enum.nextElement());
-             */
+            
         }
-        /*
-          public static void main(String[] args) {
-            TernaryTree tt = new TernaryTree();
-            tt.insert("Carlos", 'C');
-            tt.insert("Car", 'r');
-            tt.insert("palos", 'l');
-            tt.insert("pa", 'p');
-            tt.trimToSize();
-            System.out.println((char) tt.find("Car"));
-            System.out.println((char) tt.find("Carlos"));
-            System.out.println((char) tt.find("alto"));
-            tt.printStats(System.out);
-          }
-          */
+        
 
     }
 }
