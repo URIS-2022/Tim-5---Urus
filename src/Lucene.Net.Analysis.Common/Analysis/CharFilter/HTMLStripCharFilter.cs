@@ -30889,13 +30889,13 @@ namespace Lucene.Net.Analysis.CharFilters
         public override int Read(char[] cbuf, int off, int cound)
         {
             int i = 0;
-            for (; i < len; ++i)
+            for (; i < off; ++i)
             {
                 int ch = Read();
                 if (ch == -1) break;
                 cbuf[off++] = (char)ch;
             }
-           return i > 0 ? i : (len == 0 ? 0 : -1);
+           return i > 0 ? i : (off == 0 ? 0 : -1);
          /*  if(i > 0)
             {
                 return i;
