@@ -77,7 +77,7 @@ namespace Lucene.Net.Codecs.BlockTerms
                 Term = BytesRef.DeepCopyOf(other.Term);
             }
 
-            public override bool Equals(object other)
+            public override bool Equals(object obj)
             {
                 var o = (FieldAndTerm)other;
                 return o.Field.Equals(Field, StringComparison.Ordinal) && Term.BytesEquals(o.Term);
