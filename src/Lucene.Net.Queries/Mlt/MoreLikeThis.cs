@@ -475,7 +475,7 @@ namespace Lucene.Net.Queries.Mlt
         {
             StringBuilder sb = new StringBuilder();
             sb.Append('\t').Append("maxQueryTerms  : ").Append(MaxQueryTerms).Append('\n');
-            sb.Append("\t").Append("minWordLen     : ").Append(MinWordLen).Append("\n");
+            sb.Append('\t').Append("minWordLen     : ").Append(MinWordLen).Append('\n');
             sb.Append("\t").Append("maxWordLen     : ").Append(MaxWordLen).Append("\n");
             sb.Append("\t").Append("fieldNames     : ");
             string delim = "";

@@ -450,11 +450,8 @@ namespace Lucene.Net.Search.Highlight
             set => this._maxDocCharsToAnalyze = value;
         }
 
-        public virtual IFragmenter TextFragmenter
-        {
-            get => _textFragmenter;
-            set => _textFragmenter = value;
-        }
+        public virtual IFragmenter TextFragmenter {get; set; }
+        
 
         public virtual IScorer FragmentScorer
         {

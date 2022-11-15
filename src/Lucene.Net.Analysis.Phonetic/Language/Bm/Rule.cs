@@ -469,7 +469,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language.Bm
                             {
                                 // include statement
                                 string incl = line.Substring(HASH_INCLUDE.Length).Trim();
-                                if (incl.Contains(" "))
+                                if (incl.Contains(' '))
                                 {
                                     throw new ArgumentException("Malformed import statement '" + rawLine + "' in " +
                                                                        location);

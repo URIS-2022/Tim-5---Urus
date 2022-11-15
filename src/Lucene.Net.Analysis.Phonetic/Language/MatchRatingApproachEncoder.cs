@@ -199,7 +199,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language
         public virtual bool IsEncodeEquals(string name1, string name2)
         {
             // Bulletproof for trivial input - NINO
-            if (name1 is null || EMPTY.Equals(name1, StringComparison.OrdinalIgnoreCase) || SPACE.Equals(name1, StringComparison.OrdinalIgnoreCase))
+            if (string.IsNullOrEmpty(name1) || SPACE.Equals(name1, StringComparison.OrdinalIgnoreCase))
             {
                 return false;
             }

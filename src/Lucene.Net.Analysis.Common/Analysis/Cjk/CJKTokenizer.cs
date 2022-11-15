@@ -325,7 +325,7 @@ namespace Lucene.Net.Analysis.Cjk
                         }
                         else if (length > 0)
                         {
-                            if (preIsTokened == true)
+                            if (preIsTokened)
                             {
                                 // empty the buffer
                                 length = 0;

@@ -35,7 +35,7 @@ namespace Lucene.Net.Benchmarks.ByTask.Feeds
     /// A QueryMaker that uses common and uncommon actual Wikipedia queries for
     /// searching the English Wikipedia collection. 90 queries total.
     /// </summary>
-    public class EnwikiQueryMaker : AbstractQueryMaker, IQueryMaker
+    public class EnwikiQueryMaker : AbstractQueryMaker
     {
         // common and a few uncommon queries from wikipedia search logs
         private static readonly string[] STANDARD_QUERIES = { "Images catbox gif", // LUCENENET: marked readonly

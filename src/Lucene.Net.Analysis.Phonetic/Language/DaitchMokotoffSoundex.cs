@@ -427,7 +427,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language
         private string Cleanup(string input)
         {
             StringBuilder sb = new StringBuilder();
-            foreach (char c in input.ToCharArray())
+            foreach (char c in input)
             {
                 char ch = c;
                 if (char.IsWhiteSpace(ch))

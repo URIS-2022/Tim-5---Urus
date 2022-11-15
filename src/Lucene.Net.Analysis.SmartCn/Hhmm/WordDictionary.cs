@@ -342,7 +342,7 @@ namespace Lucene.Net.Analysis.Cn.Smart.Hhmm
         /// <param name="dctFilePath">path to word dictionary (coredict.dct)</param>
         /// <returns>number of words read</returns>
         /// <exception cref="IOException">If there is a low-level I/O error.</exception>
-        private int LoadMainDataFromFile(string dctFilePath)
+        public void LoadMainDataFromFile(string dctFilePath)
         {
             int i, cnt, length, total = 0;
             // The file only counted 6763 Chinese characters plus 5 reserved slots 3756~3760.
@@ -410,7 +410,7 @@ namespace Lucene.Net.Analysis.Cn.Smart.Hhmm
                     SetTableIndex(str[0], i);
                 }
             }
-            return total;
+            //return total;
         }
 
         /// <summary>
