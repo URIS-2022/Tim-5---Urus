@@ -1443,7 +1443,7 @@ namespace Lucene.Net.Codecs.Memory
                                     skipUpto = 0;
                                     stateUpto--;
                                 }
-                                goto nextTermContinue;
+                                
                             }
                             if (Debugging.AssertsEnabled) Debugging.Assert(state.transitionUpto < state.transitions.Length,
                                 " state.transitionUpto={0} vs {1}", state.transitionUpto, state.transitions.Length);

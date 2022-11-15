@@ -155,12 +155,12 @@ namespace Lucene.Net.Store
             // (remove partial .cfs/.cfe)
             try
             {
-                if (pendingEntries.Count > 0 || outputTaken)
-                {
-                    throw new ArgumentException("CFS has pending open files");
+               // if (pendingEntries.Count > 0 || outputTaken)
+                //{
+                 //   throw new ArgumentException("CFS has pending open files");
 
                         //IllegalStateException.Create("CFS has pending open files");
-                }
+                //}
                 closed = true;
                 // open the compound stream
                 GetOutput();

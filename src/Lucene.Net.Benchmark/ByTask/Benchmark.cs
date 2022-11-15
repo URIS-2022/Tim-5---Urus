@@ -115,7 +115,7 @@ namespace Lucene.Net.Benchmarks.ByTask
             if (args.Length < 1)
             {
                 // LUCENENET specific - usage info printed by our wrapper console
-                throw new ArgumentException("Exception.", nameof(ex));
+                throw new ArgumentException(nameof(ex), "Exception.");
                 //Console.WriteLine("Usage: java Benchmark <algorithm file>");
                 //Environment.Exit(1);
             }
