@@ -1807,10 +1807,6 @@ namespace Lucene.Net.Analysis.En
             //return; // LUCENENET: Removed redundant jump statements. https://rules.sonarsource.com/csharp/RSPEC-3626
         }
 
-        internal KStemmer()
-        {
-        }
-
         internal virtual string Stem(string term)
         {
             bool changed = Stem(term.ToCharArray(), term.Length);
@@ -1820,6 +1816,11 @@ namespace Lucene.Net.Analysis.En
             }
             return AsString();
         }
+        internal KStemmer()
+        {
+        }
+
+     
 
         /// <summary>
         /// Returns the result of the stem (assuming the word was changed) as a <see cref="string"/>.

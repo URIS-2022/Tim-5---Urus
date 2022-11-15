@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.Core;
 using Lucene.Net.Analysis.Util;
 using Lucene.Net.Util;
@@ -83,11 +83,7 @@ namespace Lucene.Net.Analysis.Standard
         /// setting only takes effect the next time tokenStream or
         /// tokenStream is called.
         /// </summary>
-        public int MaxTokenLength
-        {
-            set => maxTokenLength = value;
-            get => maxTokenLength;
-        }
+        public int MaxTokenLength { get; set;  }
 
         protected internal override TokenStreamComponents CreateComponents(string fieldName, TextReader reader)
         {

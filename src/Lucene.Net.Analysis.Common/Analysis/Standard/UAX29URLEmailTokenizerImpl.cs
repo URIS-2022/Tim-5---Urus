@@ -9045,7 +9045,7 @@ namespace Lucene.Net.Analysis.Standard
             return result;
         }
 
-        private static int ZzUnpackAttribute(string packed, int offset, int[] result)
+        public static void ZzUnpackAttribute(string packed, int offset, int[] result)
         {
             int i = 0;       /* index in packed string  */
             int j = offset;  /* index in unpacked array */
@@ -9056,7 +9056,7 @@ namespace Lucene.Net.Analysis.Standard
                 int value = packed[i++];
                 do result[j++] = value; while (--count > 0);
             }
-            return j;
+           // return j;
         }
 
         /// <summary>the input device</summary>
