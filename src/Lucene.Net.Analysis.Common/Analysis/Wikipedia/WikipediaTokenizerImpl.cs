@@ -925,7 +925,7 @@ namespace Lucene.Net.Analysis.Wikipedia
                     case 64: break;
                     case 19:
                         {
-                            YyBegin(STRING); numWikiTokensSeen++; return currentTokType;/* STRING ALPHANUM*/
+                            goto case 14;
                         }
                     case 65: break;
                     case 20:

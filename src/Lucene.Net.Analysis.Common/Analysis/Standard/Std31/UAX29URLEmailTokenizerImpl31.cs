@@ -3645,9 +3645,9 @@ namespace Lucene.Net.Analysis.Standard.Std31
                         if (zzInput == YYEOF && zzStartRead == zzCurrentPos)
                         {
                             zzAtEOF = true;
-                            {
-                                return StandardTokenizerInterface.YYEOF;
-                            }
+                         
+                            return StandardTokenizerInterface.YYEOF;
+                            
                         }
                         else
                         {

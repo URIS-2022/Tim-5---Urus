@@ -161,7 +161,7 @@ namespace Lucene.Net.Analysis.Synonym
             }
             catch (Exception e) when (e.IsException())
             {
-                throw; // LUCENENET: CA2200: Rethrow to preserve stack details (https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2200-rethrow-to-preserve-stack-details)
+                throw new IOException("Exception.", e); // LUCENENET: CA2200: Rethrow to preserve stack details (https://docs.microsoft.com/en-us/visualstudio/code-quality/ca2200-rethrow-to-preserve-stack-details)
             }
         }
     }

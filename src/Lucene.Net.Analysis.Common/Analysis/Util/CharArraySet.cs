@@ -325,7 +325,7 @@ namespace Lucene.Net.Analysis.Util
         IEnumerator<string> IEnumerable<string>.GetEnumerator()
         {
             // use the OriginalKeySet's enumerator (to not produce endless recursion)
-            return (IEnumerator<string>)map.OriginalKeySet.GetEnumerator();
+            return map.OriginalKeySet.GetEnumerator();
         }
 
         /// <summary>

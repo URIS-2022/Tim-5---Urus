@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.TokenAttributes;
 using Lucene.Net.Util;
 
@@ -198,11 +198,7 @@ namespace Lucene.Net.Analysis.Miscellaneous
             }
         }
 
-        public virtual TokenStream Prefix
-        {
-            get => prefix;
-            set => this.prefix = value;
-        }
+        public virtual TokenStream Prefix { get ; set ; }
 
         public virtual TokenStream Suffix
         {

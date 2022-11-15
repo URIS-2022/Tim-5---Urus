@@ -108,7 +108,7 @@ namespace Lucene.Net.Analysis.Standard
         public ClassicTokenizer(LuceneVersion matchVersion, Reader input)
             : base(input)
         {
-            Init(matchVersion);
+            Init();
         }
 
         /// <summary>
@@ -117,10 +117,10 @@ namespace Lucene.Net.Analysis.Standard
         public ClassicTokenizer(LuceneVersion matchVersion, AttributeFactory factory, Reader input)
             : base(factory, input)
         {
-            Init(matchVersion);
+            Init();
         }
 
-        private void Init(LuceneVersion matchVersion)
+        private void Init()
         {
             this.scanner = new ClassicTokenizerImpl(m_input);
             this.termAtt = AddAttribute<ICharTermAttribute>();

@@ -361,7 +361,7 @@ namespace Lucene.Net.Analysis.Fr
                         }
                     }
                 }
-                if (pos > -1 && seenConson && !seenVowel)
+                if (pos > -1 && seenConson && seenVowel)
                 {
                     sb[pos] = 'e';
                 }

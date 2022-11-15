@@ -525,8 +525,8 @@ namespace Lucene.Net.Analysis.Hunspell
                             dictionary.flagLookup.Get(append, scratch);
                             char[] appendFlags = Dictionary.DecodeFlags(scratch);
                             if (Debugging.AssertsEnabled) Debugging.Assert(prevFlag >= 0);
-                            bool allowed = dictionary.onlyincompound == -1 ||
-                                !Dictionary.HasFlag(appendFlags, (char)dictionary.onlyincompound);
+                            
+                           
                             compatible = HasCrossCheckedFlag((char)prevFlag, appendFlags, previousWasPrefix);
                         }
                         else

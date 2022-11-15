@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.CharFilters;
 using System;
 using System.IO;
@@ -48,7 +48,7 @@ namespace Lucene.Net.Analysis.Pattern
     /// </summary>
     public class PatternReplaceCharFilter : BaseCharFilter
     {
-        [Obsolete]
+        [Obsolete("Replacing char filter")]
         public const int DEFAULT_MAX_BLOCK_CHARS = 10000;
 
         private readonly Regex pattern;
