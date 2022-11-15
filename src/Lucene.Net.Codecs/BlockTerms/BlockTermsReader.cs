@@ -381,18 +381,7 @@ namespace Lucene.Net.Codecs.BlockTerms
                         throw IllegalStateException.Create("terms index was not loaded");
                     }
 
-                    //System.out.println("BTR.seek seg=" + segment + " target=" + fieldInfo.name + ":" + target.utf8ToString() + " " + target + " current=" + term().utf8ToString() + " " + term() + " indexIsCurrent=" + indexIsCurrent + " didIndexNext=" + didIndexNext + " seekPending=" + seekPending + " divisor=" + indexReader.getDivisor() + " this="  + this);
-                    if (didIndexNext)
-                    {
-                        if (nextIndexTerm is null)
-                        {
-                            //System.out.println("  nextIndexTerm=null");
-                        }
-                        else
-                        {
-                            //System.out.println("  nextIndexTerm=" + nextIndexTerm.utf8ToString());
-                        }
-                    }
+                    
 
                     bool doSeek = true;
 

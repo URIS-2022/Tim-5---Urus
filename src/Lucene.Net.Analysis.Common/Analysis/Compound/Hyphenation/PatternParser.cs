@@ -296,7 +296,7 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
                 object item = ex[i];
                 if (item is string)
                 {
-                    string str = (string)item;
+                    string str = item as string;
                     StringBuilder buf = new StringBuilder();
                     for (int j = 0; j < str.Length; j++)
                     {

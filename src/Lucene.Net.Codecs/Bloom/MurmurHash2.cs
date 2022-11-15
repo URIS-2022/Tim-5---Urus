@@ -1,4 +1,4 @@
-using Lucene.Net.Util;
+﻿using Lucene.Net.Util;
 
 namespace Lucene.Net.Codecs.Bloom
 {
@@ -98,9 +98,9 @@ namespace Lucene.Net.Codecs.Bloom
             return Hash(data, unchecked((int)0x9747b28c), offset, len);
         }
 
-        public override int Hash(BytesRef br)
+        public override int Hash(BytesRef bytes)
         {
-            return Hash32(br.Bytes, br.Offset, br.Length);
+            return Hash32(bytes.Bytes, bytes.Offset, bytes.Length);
         }
     }
 }
