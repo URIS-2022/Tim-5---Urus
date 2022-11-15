@@ -381,7 +381,7 @@ namespace Lucene.Net.Codecs.BlockTerms
                         throw IllegalStateException.Create("terms index was not loaded");
                     }
 
-                    
+                     
 
                     bool doSeek = true;
 

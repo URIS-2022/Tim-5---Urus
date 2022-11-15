@@ -45,7 +45,7 @@ namespace Lucene.Net.Analysis.En
     internal class KStemData3
     {
         private KStemData3()
-        {
+        { 
         }
         internal static readonly string[] data = new string[] {
             "distasteful","distemper","distempered","distend","distension",

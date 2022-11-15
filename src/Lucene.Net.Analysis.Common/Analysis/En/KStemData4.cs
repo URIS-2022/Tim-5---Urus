@@ -43,11 +43,11 @@ namespace Lucene.Net.Analysis.En
     /// A list of words used by Kstem
     /// </summary>
     internal class KStemData4
-    {
+    { 
         private KStemData4()
         {
         }
-        internal static readonly string[] data = new string[] {
+        internal static readonly  string[] data = new string[] {
             "granular","granulate","granule","grape","grapefruit",
             "grapeshot","grapevine","graph","graphic","graphical",
             "graphically","graphite","graphology","grapnel","grapple",

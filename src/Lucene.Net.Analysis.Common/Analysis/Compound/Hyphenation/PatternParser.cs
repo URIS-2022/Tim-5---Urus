@@ -287,7 +287,7 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
             }
             return pat.ToString();
         }
-
+          
         protected virtual IList<object> NormalizeException<T1>(IList<T1> ex)
         {
             IList<object> res = new JCG.List<object>();

@@ -46,6 +46,7 @@ namespace Lucene.Net.Analysis.En
     {
         private KStemData8()
         {
+
         }
         internal static readonly string[] data = new string[] {
             "tenor","tenpin","tense","tensile","tension",

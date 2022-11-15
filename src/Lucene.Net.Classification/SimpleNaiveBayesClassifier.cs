@@ -136,7 +136,7 @@ namespace Lucene.Net.Classification
             return ret;
         }
 
-        /// <summary>
+        /// <summary> 
         /// Assign a class (with score) to the given text string
         /// </summary>
         /// <param name="inputDocument">a string containing text to be classified</param>

@@ -275,7 +275,7 @@ namespace Lucene.Net.Analysis.Cjk
                         }
                         else if (length > 0)
                         {
-                            if (preIsTokened)
+                            if (preIsTokened) 
                             {
                                 length = 0;
                                 preIsTokened = false;

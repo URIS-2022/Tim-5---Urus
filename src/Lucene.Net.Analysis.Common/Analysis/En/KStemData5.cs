@@ -44,7 +44,7 @@ namespace Lucene.Net.Analysis.En
     /// </summary>
     internal class KStemData5
     {
-        private KStemData5()
+        private KStemData5()  
         {
         }
         internal static readonly string[] data = new string[] {

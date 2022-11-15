@@ -43,7 +43,7 @@ namespace Lucene.Net.Analysis.En
     /// A list of words used by Kstem
     /// </summary>
     internal class KStemData2
-    {
+    { 
         private KStemData2()
         {
         }

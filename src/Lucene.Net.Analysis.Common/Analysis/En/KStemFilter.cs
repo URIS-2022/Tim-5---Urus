@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.TokenAttributes;
 using System.IO;
 
@@ -19,7 +19,7 @@ namespace Lucene.Net.Analysis.En
      * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
      * See the License for the specific language governing permissions and
      * limitations under the License.
-     */
+     */  
 
     /// <summary>
     /// A high-performance kstem filter for english.

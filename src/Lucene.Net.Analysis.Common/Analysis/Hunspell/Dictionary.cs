@@ -599,7 +599,7 @@ namespace Lucene.Net.Analysis.Hunspell
                     if (patternIndex > short.MaxValue)
                     {
                         throw UnsupportedOperationException.Create("Too many patterns, please report this to dev@lucene.apache.org");
-                    }
+                    } 
                     seenPatterns[regex] = patternIndex;
                     CharacterRunAutomaton pattern = new CharacterRunAutomaton((new RegExp(regex, RegExpSyntax.NONE)).ToAutomaton());
                     patterns.Add(pattern);

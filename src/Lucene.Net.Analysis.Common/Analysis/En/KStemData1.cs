@@ -47,7 +47,7 @@ namespace Lucene.Net.Analysis.En
     {
         private KStemData1()
         {
-        }
+        } 
         // KStemData1 ... KStemData8 are created from "head_word_list.txt"
         internal static readonly string[] data = new string[] {
             "aback","abacus","abandon","abandoned","abase",

@@ -104,3 +104,4 @@ namespace Lucene.Net.Codecs.Bloom
         }
     }
 }
+  
