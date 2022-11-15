@@ -121,7 +121,7 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
 
         internal TernaryTree()
         {
-            Init();
+            
         }
 
         protected virtual void Init()

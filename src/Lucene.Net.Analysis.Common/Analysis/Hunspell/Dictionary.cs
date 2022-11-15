@@ -772,7 +772,6 @@ namespace Lucene.Net.Analysis.Hunspell
             {
                 encoding = "iso-" + encoding.Substring(3);
 
-                //encoding = encoding.Concat("iso-", encoding.AsSpan(3));
 
 
 
