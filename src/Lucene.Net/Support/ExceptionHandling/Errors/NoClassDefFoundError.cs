@@ -39,7 +39,7 @@ namespace Lucene
 #if FEATURE_SERIALIZABLE_EXCEPTIONS
     [Serializable]
 #endif
-    internal class NoClassDefFoundError : Exception, IError // LUCENENET: Subclassing Error is not allowed, so we identify with the IError interface and subclass Exception
+    public class NoClassDefFoundError : Exception, IError // LUCENENET: Subclassing Error is not allowed, so we identify with the IError interface and subclass Exception
     {
         [Obsolete("Use NoClassDefFoundError.Create() instead.", error: true)]
         public NoClassDefFoundError()

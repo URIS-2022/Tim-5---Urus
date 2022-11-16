@@ -497,7 +497,7 @@ namespace Lucene.Net.Analysis.Hunspell
                             continue;
                         }
                         affixReader.Position = 8 * suffix;
-                        char flag = (char)(affixReader.ReadInt16() & 0xffff);
+                        
                         char stripOrd = (char)(affixReader.ReadInt16() & 0xffff);
                         int condition = (char)(affixReader.ReadInt16() & 0xffff);
                         bool crossProduct = (condition & 1) == 1;

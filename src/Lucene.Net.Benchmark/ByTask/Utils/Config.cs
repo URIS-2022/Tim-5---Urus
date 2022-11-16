@@ -71,7 +71,7 @@ namespace Lucene.Net.Benchmarks.ByTask.Utils
             while ((line = algReader.ReadLine()) != null)
             {
                 lines.Add(line);
-                if (line.IndexOf('=') > 0)
+                if (line.IndexOf("=") > 0)
                 {
                     lastConfigLine = lines.Count;
                 }

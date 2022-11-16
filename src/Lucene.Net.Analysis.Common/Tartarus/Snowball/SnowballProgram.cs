@@ -63,6 +63,17 @@ namespace Lucene.Net.Tartarus.Snowball
         /// <summary>
         /// Set the current string.
         /// </summary>
+        ///
+
+        public virtual void SetCurrent(char[] text, int length)
+        {
+            m_current = text;
+            m_cursor = 0;
+            m_limit = length;
+            m_limit_backward = 0;
+            m_bra = m_cursor;
+            m_ket = m_limit;
+        }
         public virtual void SetCurrent(string value)
         {
             m_current = value.ToCharArray();
@@ -83,15 +94,7 @@ namespace Lucene.Net.Tartarus.Snowball
         /// </summary>
         /// <param name="text">character array containing input</param>
         /// <param name="length">valid length of text.</param>
-        public virtual void SetCurrent(char[] text, int length)
-        {
-            m_current = text;
-            m_cursor = 0;
-            m_limit = length;
-            m_limit_backward = 0;
-            m_bra = m_cursor;
-            m_ket = m_limit;
-        }
+        
 
         /// <summary>
         /// Get the current buffer containing the stem.
