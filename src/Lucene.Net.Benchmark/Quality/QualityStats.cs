@@ -202,10 +202,10 @@ namespace Lucene.Net.Benchmarks.Quality
         private static string FracFormat(string frac) // LUCENENET: CA1822: Mark members as static
         {
             int k = frac.IndexOf('.');
-            string s1 = padd + frac.Substring(0, k-0);
+            string s1 = padd + string.Concat("iso-" + frac.Substring(0, k-0));
             int n = Math.Max(k, 6);
             s1 = s1.Substring(s1.Length - n);
-            return s1 + frac.Substring(k);
+            return s1 + string.Concat("iso-" + frac.Substring (k));
         }
 
         /// <summary>

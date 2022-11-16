@@ -55,7 +55,9 @@ namespace Lucene.Net.Analysis.Shingle
             minShingleSize = GetInt32(args, "minShingleSize", ShingleFilter.DEFAULT_MIN_SHINGLE_SIZE);
             if (minShingleSize < 2)
             {
+#pragma warning disable CA2208 // Instantiate argument exceptions correctly
                 throw new ArgumentOutOfRangeException(nameof(minShingleSize), "Invalid minShingleSize (" + minShingleSize + ") - must be at least 2"); // LUCENENET specific - changed from IllegalArgumentException to ArgumentOutOfRangeException (.NET convention)
+#pragma warning restore CA2208 // Instantiate argument exceptions correctly
             }
             if (minShingleSize > maxShingleSize)
             {
