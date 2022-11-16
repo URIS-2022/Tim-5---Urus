@@ -27,7 +27,7 @@ namespace Lucene.Net.Analysis.NGram
     /// Old version of <see cref="EdgeNGramTokenizer"/> which doesn't handle correctly
     /// supplementary characters.
     /// </summary>
-    [Obsolete]
+    [Obsolete("Lucene43EdgeNGramTokenizer")]
     public sealed class Lucene43EdgeNGramTokenizer : Tokenizer
     {
         public const Side DEFAULT_SIDE = Side.FRONT;

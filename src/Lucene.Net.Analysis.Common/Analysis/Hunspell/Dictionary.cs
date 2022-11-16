@@ -68,7 +68,6 @@ namespace Lucene.Net.Analysis.Hunspell
         private const string UTF8_FLAG_TYPE = "UTF-8";
         private const string LONG_FLAG_TYPE = "long";
 
-        // TODO: really for suffixes we should reverse the automaton and run them backwards
         private const string PREFIX_CONDITION_REGEX_PATTERN = "{0}.*";
         private const string SUFFIX_CONDITION_REGEX_PATTERN = ".*{0}";
 

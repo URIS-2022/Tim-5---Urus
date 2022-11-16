@@ -200,10 +200,6 @@ namespace Lucene.Net.Analysis.Miscellaneous
 
         public virtual TokenStream Prefix { get ; set ; }
 
-        public virtual TokenStream Suffix
-        {
-            get => suffix;
-            set => this.suffix = value;
-        }
+        public virtual TokenStream Suffix{  get;    set;}
     }
 }

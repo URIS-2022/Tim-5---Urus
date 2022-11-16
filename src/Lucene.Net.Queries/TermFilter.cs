@@ -39,7 +39,9 @@ namespace Lucene.Net.Queries
             }
             else if (term.Field is null)
             {
-                throw new ArgumentNullException(nameof(term.Field), "term.Field must not be null"); // LUCENENET specific - changed from IllegalArgumentException to ArgumentNullException (.NET convention)
+#pragma warning disable CA2208 // Instantiate argument exceptions correctly
+                throw new ArgumentOutOfRangeException(nameof(term.Field), "input.Length must be > 0 (got " + term.Field + ")"); // LUCENENET specific - changed from IllegalArgumentException to ArgumentOutOfRangeException (.NET convention)
+#pragma warning restore CA2208 // Instantiate argument exceptions correctly
             }
             this.term = term;
         }

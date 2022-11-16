@@ -861,7 +861,7 @@ namespace Lucene.Net.Search.Suggest.Analyzing
                     {
                         if (preserveSep && preserveHoles)
                         {
-                            builder.Append("\u0000");
+                            builder.Append('\u0000');
                         }
                         lastRemoved = true;
                     }
