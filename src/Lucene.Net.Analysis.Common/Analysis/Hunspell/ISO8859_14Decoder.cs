@@ -97,7 +97,7 @@ namespace Lucene.Net.Analysis.Hunspell
             return count;
         }
 
-        public override int GetChars(byte[] bytesIn, int byteIndex, int byteCount, char[] charsOut, int charIndex)
+        public override int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex)
         {
             int writeCount = 0;
             int charPointer = charIndex;
@@ -105,13 +105,13 @@ namespace Lucene.Net.Analysis.Hunspell
             for (int i = byteIndex; i < (byteIndex + byteCount); i++)
             {
                 // Decode the value
-                char ch = (char)(bytesIn[i] & 0xff);
+                char ch = (char)(bytes[i] & 0xff);
                 if (ch >= 0xA0)
                 {
                     ch = TABLE[ch - 0xA0];
                 }
                 // write the value to the correct buffer slot
-                charsOut[charPointer] = ch;
+                chars[charPointer] = ch;
                 writeCount++;
                 charPointer++;
             }

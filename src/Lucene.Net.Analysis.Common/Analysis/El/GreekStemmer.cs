@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.Util;
 using Lucene.Net.Util;
 
@@ -321,12 +321,11 @@ namespace Lucene.Net.Analysis.El
                 removed = true;
             }
 
-            if (removed)
+            if (removed && EndsWithVowel(s, len) || exc6.Contains(s, 0, len))
             {
-                if (EndsWithVowel(s, len) || exc6.Contains(s, 0, len))
-                {
-                    len += 2; // add back -ικ
-                }
+                
+                len += 2; // add back -ικ
+                
             }
             return len;
         }

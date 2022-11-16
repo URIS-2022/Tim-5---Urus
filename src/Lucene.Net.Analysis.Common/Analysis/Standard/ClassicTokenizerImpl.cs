@@ -323,7 +323,7 @@ namespace Lucene.Net.Analysis.Standard
 
         /// <summary>
         /// the current state of the DFA </summary>
-        private int zzState;
+        int zzState;
 
         /// <summary>
         /// the current lexical state </summary>

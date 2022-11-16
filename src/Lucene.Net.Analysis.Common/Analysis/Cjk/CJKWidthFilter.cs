@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.TokenAttributes;
 using Lucene.Net.Analysis.Util;
 
@@ -35,7 +35,7 @@ namespace Lucene.Net.Analysis.Cjk
     /// </summary>
     public sealed class CjkWidthFilter : TokenFilter
     {
-        private ICharTermAttribute termAtt;
+        private readonly ICharTermAttribute termAtt;
 
         /// <summary>
         /// halfwidth kana mappings: 0xFF65-0xFF9D 

@@ -219,7 +219,7 @@ namespace Lucene.Net.Analysis.Fr
                 suite = true;
             }
             temp = DeleteFromIfTestVowelBeforeIn(RV, new string[] { "ments", "ment" }, true, RV);
-            if (temp == true)
+            if (temp)
             {
                 suite = true;
             }

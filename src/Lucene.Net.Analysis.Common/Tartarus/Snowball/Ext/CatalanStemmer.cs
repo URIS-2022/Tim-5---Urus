@@ -848,7 +848,7 @@ namespace Lucene.Net.Tartarus.Snowball.Ext
 
         private bool r_R1()
         {
-            if (!(I_p1 <= m_cursor))
+            if (!(I_p1 > m_cursor))
             {
                 return false;
             }

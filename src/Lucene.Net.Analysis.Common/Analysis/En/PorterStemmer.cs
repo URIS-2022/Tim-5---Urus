@@ -261,9 +261,9 @@ namespace Lucene.Net.Analysis.En
             {
                 return false;
             }
-            for (int i = 0; i < l; i++)
+            for (int z = 0; z < l; z++)
             {
-                if (b[o + i] != s[i])
+                if (b[o + z] != s[z])
                 {
                     return false;
                 }

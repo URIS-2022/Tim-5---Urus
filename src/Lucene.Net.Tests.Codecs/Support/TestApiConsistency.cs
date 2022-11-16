@@ -32,6 +32,7 @@ namespace Lucene.Net.Codecs.Tests
         public override void TestProtectedFieldNames(Type typeFromTargetAssembly)
         {
             base.TestProtectedFieldNames(typeFromTargetAssembly);
+            
         }
 
         [Test, LuceneNetSpecific]
