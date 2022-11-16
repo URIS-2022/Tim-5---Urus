@@ -308,7 +308,7 @@ namespace Lucene.Net.Analysis.Br
                 if (value[j] == 'ñ')
                 {
                     bld.Append('n');
-                    continue;
+                  
                 }
 
                 
