@@ -31,7 +31,7 @@ namespace Lucene.Net.Analysis.Ja.Util
     {
         private const string NGRAM_DICTIONARY_ENTRY = "NGRAM,5,5,-32768,記号,一般,*,*,*,*,*,*,*";
 
-        private readonly string encoding = "euc-jp";
+        private readonly string encoding ;
 
         public UnknownDictionaryBuilder(string encoding)
         {

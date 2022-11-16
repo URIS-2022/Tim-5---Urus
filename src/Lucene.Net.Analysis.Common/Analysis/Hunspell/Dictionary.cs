@@ -769,12 +769,12 @@ namespace Lucene.Net.Analysis.Hunspell
             if (encoding.Length > 3 && encoding.StartsWith("ISO", StringComparison.OrdinalIgnoreCase) && 
                 encoding[3] != '-')
             {
+               
                 encoding = string.Concat("iso-" + encoding.Substring(3));
-
-
-
+               
 
             }
+
             // Special case - for codepage 1250-1258, we need to change to 
             // windows-1251, etc.
             else if (windowsCodePagePattern.IsMatch(encoding))

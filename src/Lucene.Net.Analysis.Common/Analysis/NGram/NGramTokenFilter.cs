@@ -119,7 +119,7 @@ namespace Lucene.Net.Analysis.NGram
             public override int PositionIncrement
             {
                 get => 0;
-                set { }
+                set => PositionIncrement = value;
             }
         }
 

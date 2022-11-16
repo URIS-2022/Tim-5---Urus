@@ -93,6 +93,7 @@ namespace Lucene.Net.Analysis.Miscellaneous
                 {
                     while (consumeAllTokens && m_input.IncrementToken()) // NOOP
                     {
+                         //Comment
                     }
                     exhausted = true;
                     return false;

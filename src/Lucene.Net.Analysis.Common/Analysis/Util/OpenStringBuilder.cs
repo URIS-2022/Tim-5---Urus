@@ -31,7 +31,10 @@ namespace Lucene.Net.Analysis.Util
     {
         protected char[] m_buf;
         protected int m_len;
-
+        public OpenStringBuilder(int size)
+        {
+            m_buf = new char[size];
+        }
         public OpenStringBuilder()
             : this(32)
         {
@@ -39,10 +42,7 @@ namespace Lucene.Net.Analysis.Util
 
         bool ICharSequence.HasValue => m_buf != null;
 
-        public OpenStringBuilder(int size)
-        {
-            m_buf = new char[size];
-        }
+       
 
         public OpenStringBuilder(char[] arr, int len)
         {

@@ -25,7 +25,7 @@ namespace Lucene.Net.Analysis.NGram
     /// <summary>
     /// Old broken version of <see cref="NGramTokenizer"/>.
     /// </summary>
-    [Obsolete]
+    [Obsolete ("Message")]
     public sealed class Lucene43NGramTokenizer : Tokenizer
     {
         public const int DEFAULT_MIN_NGRAM_SIZE = 1;

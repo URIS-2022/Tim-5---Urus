@@ -548,17 +548,17 @@ namespace Lucene.Net.Analysis.Cn.Smart.Hhmm
         /// Calculate character <paramref name="c"/>'s position in hash table, 
         /// then initialize the value of that position in the address table.
         /// </summary>
-        private bool SetTableIndex(char c, int j)
+        private void SetTableIndex(char c, int j)
         {
             int index = GetAvaliableTableIndex(c);
             if (index != -1)
             {
                 charIndexTable[index] = c;
                 wordIndexTable[index] = (short)j;
-                return true;
+                return;
             }
             else
-                return false;
+                return ;
         }
 
         private short GetAvaliableTableIndex(char c)

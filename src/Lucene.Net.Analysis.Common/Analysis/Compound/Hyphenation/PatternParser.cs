@@ -68,11 +68,8 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
             this.consumer = consumer;
         }
 
-        public virtual IPatternConsumer Consumer
-        {
-            get => this.consumer; // LUCENENET NOTE: Added getter per MSDN guidelines
-            set => this.consumer = value;
-        }
+        public virtual IPatternConsumer Consumer { get; set; }
+      
 
         /// <summary>
         /// Parses a hyphenation pattern file.

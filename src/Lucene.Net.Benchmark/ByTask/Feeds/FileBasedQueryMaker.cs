@@ -47,7 +47,7 @@ namespace Lucene.Net.Benchmarks.ByTask.Feeds
     /// file.query.maker.default.field=body
     /// </code>
     /// </remarks>
-    public class FileBasedQueryMaker : AbstractQueryMaker, IQueryMaker
+    public class FileBasedQueryMaker : AbstractQueryMaker
     {
         protected override Query[] PrepareQueries()
         {
