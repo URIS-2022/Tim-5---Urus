@@ -1,6 +1,8 @@
 ﻿// Lucene version compatibility level 9.2
 using Lucene.Net.Analysis.Util;
 using System.Collections.Generic;
+using System.Linq;
+using static Lucene.Net.Analysis.Lv.LatvianStemmer;
 using JCG = J2N.Collections.Generic;
 
 namespace Lucene.Net.Analysis.Fa
@@ -80,12 +82,11 @@ namespace Lucene.Net.Analysis.Fa
         /// <returns> new length of input buffer after stemming </returns>
         private int StemSuffix(char[] s, int len)
         {
-            foreach (var suffix in Suffixes)
+            foreach (var suffix in Suffixes.Where(suffix => EndsWithCheckLength(s, len, suffix)))
             {
-                if (EndsWithCheckLength(s, len, suffix))
-                {
+                
                     len = StemmerUtil.DeleteN(s, len - suffix.Length, len, suffix.Length);
-                }
+                
             }
             return len;
         }

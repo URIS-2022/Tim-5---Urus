@@ -603,6 +603,7 @@ namespace Lucene.Net.Index.Memory
 
             public void SetNextReader(AtomicReaderContext context)
             {
+                // Do nothing 
             }
         }
 

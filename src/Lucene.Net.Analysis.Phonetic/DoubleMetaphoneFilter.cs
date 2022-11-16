@@ -52,7 +52,7 @@ namespace Lucene.Net.Analysis.Phonetic
 
         public override bool IncrementToken()
         {
-            for (;;)
+            while (true)
             {
                 if (!(remainingTokens.Count == 0))
                 {
