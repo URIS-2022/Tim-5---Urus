@@ -1083,7 +1083,7 @@ namespace Lucene.Net.QueryParsers.Flexible.Standard.Parser
 #if FEATURE_SERIALIZABLE_EXCEPTIONS
         [Serializable]
 #endif
-        internal sealed class LookaheadSuccess : Exception
+        public sealed class LookaheadSuccess : Exception
         {
             public LookaheadSuccess()
             { }

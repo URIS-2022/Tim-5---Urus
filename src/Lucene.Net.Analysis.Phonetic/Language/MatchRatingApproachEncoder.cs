@@ -110,7 +110,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language
         public string Encode(string name)
         {
             // Bulletproof for trivial input - NINO
-            if (name is null || EMPTY.Equals(name, StringComparison.OrdinalIgnoreCase) ||
+            if (string.IsNullOrEmpty(name) ||
                 SPACE.Equals(name, StringComparison.OrdinalIgnoreCase) || name.Length == 1)
             {
                 return EMPTY;

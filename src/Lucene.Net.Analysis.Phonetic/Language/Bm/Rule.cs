@@ -644,7 +644,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language.Bm
                 if (startsWithBox && endsWithBox)
                 {
                     string boxContent = content.Substring(1, (content.Length - 1) - 1);
-                    if (!boxContent.Contains("["))
+                    if (!boxContent.Contains('['))
                     {
                         // box containing alternatives
                         bool negate = boxContent.StartsWith("^", StringComparison.Ordinal);
