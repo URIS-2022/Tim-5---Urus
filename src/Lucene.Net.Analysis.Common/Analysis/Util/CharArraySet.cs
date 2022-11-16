@@ -101,7 +101,7 @@ namespace Lucene.Net.Analysis.Util
         public CharArraySet(LuceneVersion matchVersion, ICollection<string> c, bool ignoreCase)
             : this(matchVersion, c.Count, ignoreCase)
         {
-            this.UnionWith(c);
+           // this.UnionWith(c);
         }
 
         /// <summary>

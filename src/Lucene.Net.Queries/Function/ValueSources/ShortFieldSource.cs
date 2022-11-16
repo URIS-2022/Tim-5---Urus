@@ -31,7 +31,7 @@ namespace Lucene.Net.Queries.Function.ValueSources
     /// <para/>
     /// NOTE: This was ShortFieldSource in Lucene
     /// </summary>
-    [Obsolete]
+    [Obsolete("Int16FieldSource")]
     public class Int16FieldSource : FieldCacheSource
     {
         private readonly FieldCache.IInt16Parser parser;

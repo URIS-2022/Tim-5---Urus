@@ -770,7 +770,7 @@ namespace Lucene.Net.Analysis.Hunspell
             if (encoding.Length > 3 && encoding.StartsWith("ISO", StringComparison.OrdinalIgnoreCase) && 
                 encoding[3] != '-')
             {
-                encoding = "iso-" + encoding.Substring(3);
+                encoding = string.Concat("iso-" + encoding.Substring(3));
 
 
 

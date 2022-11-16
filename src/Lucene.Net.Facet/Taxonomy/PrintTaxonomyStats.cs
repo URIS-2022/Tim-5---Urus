@@ -54,7 +54,7 @@ namespace Lucene.Net.Facet.Taxonomy
             if (args.Length != (printTree ? 2 : 1))
             {
                 // LUCENENET specific - our wrapper console shows the correct usage
-                throw new ArgumentException(nameof(args));
+                throw new ArgumentException(null, nameof(args));
                 //Console.WriteLine("\nUsage: java -classpath ... org.apache.lucene.facet.util.PrintTaxonomyStats [-printTree] /path/to/taxononmy/index\n");
                 //return 1;
             }

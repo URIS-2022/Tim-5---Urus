@@ -162,7 +162,10 @@ namespace Lucene.Net.Analysis.Synonym
                 }
                 if (input.Length <= 0)
                 {
+
+#pragma warning disable CA2208 // Instantiate argument exceptions correctly
                     throw new ArgumentOutOfRangeException(nameof(input.Length), "input.Length must be > 0 (got " + input.Length + ")"); // LUCENENET specific - changed from IllegalArgumentException to ArgumentOutOfRangeException (.NET convention)
+#pragma warning restore CA2208 // Instantiate argument exceptions correctly
                 }
                 if (numOutputWords <= 0)
                 {

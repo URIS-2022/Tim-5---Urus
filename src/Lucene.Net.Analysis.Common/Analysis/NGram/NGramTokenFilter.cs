@@ -128,7 +128,7 @@ namespace Lucene.Net.Analysis.NGram
             public override int PositionLength
             {
                 get => 0;
-                set { }
+                set => PositionLength= value;
             }
         }
 
