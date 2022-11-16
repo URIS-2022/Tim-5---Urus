@@ -26,7 +26,7 @@ namespace Lucene.Net.Analysis.CharFilters
      * limitations under the License.
      */
 
-    // TODO: save/load?
+   
 
     /// <summary>
     /// Holds a map of <see cref="string"/> input to <see cref="string"/> output, to be used

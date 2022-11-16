@@ -96,7 +96,7 @@ namespace Lucene.Net.Analysis.NGram
         /// <param name="side"> the <see cref="Side"/> from which to chop off an n-gram </param>
         /// <param name="minGram"> the smallest n-gram to generate </param>
         /// <param name="maxGram"> the largest n-gram to generate </param>
-        [Obsolete]
+        [Obsolete ("it should no longer be used")]
         public Lucene43EdgeNGramTokenizer(LuceneVersion version, AttributeFactory factory, TextReader input, Side side, int minGram, int maxGram)
             : base(factory, input)
         {
