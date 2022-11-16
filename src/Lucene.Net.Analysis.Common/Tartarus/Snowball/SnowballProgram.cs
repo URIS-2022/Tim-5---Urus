@@ -450,7 +450,7 @@ namespace Lucene.Net.Tartarus.Snowball
                 m_ket > m_limit)
             {
                 throw new ArgumentException("faulty slice operation: bra=" + m_bra + ",ket=" + m_ket + ",limit=" + m_limit);
-                // FIXME: report error somehow.
+                // report error somehow.
                 /*
                 fprintf(stderr, "faulty slice operation:\n");
                 debug(z, -1, 0);

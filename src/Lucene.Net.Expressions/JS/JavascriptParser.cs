@@ -526,7 +526,7 @@ namespace Lucene.Net.Expressions.JS
                         }
                     //loop2_continue: // LUCENENET NOTE: Not used
                     }
-                loop2_break: {/* LUCENENET: intentionally blank */}
+                 {/* LUCENENET: intentionally blank */}
                 }
                 retval.Stop = input.LT(-1);
                 retval.Tree = (CommonTree)m_adaptor.RulePostProcessing(root_0);

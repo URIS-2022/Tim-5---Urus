@@ -190,7 +190,7 @@ namespace Lucene.Net.Spatial.Prefix
                 }
             }
 
-            private SmallDocSet? CollectDocs(IBits acceptContains)
+            public SmallDocSet? CollectDocs(IBits acceptContains)
             {
                 // LUCENENET specific - guard against null m_termsEnum
                 if (m_termsEnum is null)

@@ -342,7 +342,7 @@ namespace Lucene.Net.Analysis.Synonym
         {
             private readonly Analyzer analyzer;
 
-            public Parser(bool dedup, Analyzer analyzer) 
+            protected Parser(bool dedup, Analyzer analyzer) 
                 : base(dedup)
             {
                 this.analyzer = analyzer;

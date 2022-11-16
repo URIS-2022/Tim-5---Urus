@@ -1026,7 +1026,7 @@ loop2_break: {/* LUCENENET: intentionally blank */}
                         {
                             int alt6 = 2;
                             int LA6_0 = input.LA(1);
-                            if (((LA6_0 >= '0' && LA6_0 <= '9')))
+                            if (LA6_0 >= '0' && LA6_0 <= '9')
                             {
                                 alt6 = 1;
                             }
