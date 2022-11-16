@@ -141,7 +141,7 @@ namespace Lucene.Net.Benchmarks.ByTask.Tasks
                 }
             }
 
-            WriteHeader(lineFileOut);
+            //WriteHeader(lineFileOut);
         }
 
         /// <summary>

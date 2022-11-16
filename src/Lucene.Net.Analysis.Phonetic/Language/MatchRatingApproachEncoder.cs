@@ -203,7 +203,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language
             {
                 return false;
             }
-            else if (name2 is null || EMPTY.Equals(name2, StringComparison.OrdinalIgnoreCase) || SPACE.Equals(name2, StringComparison.OrdinalIgnoreCase))
+            else if (string.IsNullOrEmpty(name2)|| SPACE.Equals(name2, StringComparison.OrdinalIgnoreCase))
             {
                 return false;
             }

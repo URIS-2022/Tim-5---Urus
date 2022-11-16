@@ -444,12 +444,9 @@ namespace Lucene.Net.Analysis.Util
                 throw UnsupportedOperationException.Create("CharArraySet is readonly");
             }
             bool modified = false;
-            foreach (var item in other)
+            foreach (var item in other.Where(item => Add(item)))
             {
-                if (Add(item))
-                {
                     modified = true;
-                }
             }
             return modified;
         }

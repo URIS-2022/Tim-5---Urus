@@ -30694,7 +30694,7 @@ namespace Lucene.Net.Analysis.CharFilters
         private int cumulativeDiff;
         private bool escapeBR = false;
         private bool escapeSCRIPT = false;
-        private bool escapeSTYLE = false;
+        private readonly bool escapeSTYLE = false;
         private int restoreState;
         private int previousRestoreState;
         private int outputCharCount;
@@ -31896,11 +31896,8 @@ namespace Lucene.Net.Analysis.CharFilters
                                 length = 4; // (14 - 10)
 
                                 // Low surrogates are in decimal range [56320, 57343]
-                                if (!Integer.TryParse(zzBuffer, startIndex, length, radix: 16, out int lowSurrogate))
-                                {
-                                    // should never happen
-                                    if (Debugging.AssertsEnabled) Debugging.Assert(false, "Exception parsing low surrogate '{0}'", new CharArrayFormatter(zzBuffer, startIndex, length));
-                                }
+                                if (!Integer.TryParse(zzBuffer, startIndex, length, radix: 16, out int lowSurrogate) && Debugging.AssertsEnabled) Debugging.Assert(false, "Exception parsing low surrogate '{0}'", new CharArrayFormatter(zzBuffer, startIndex, length));
+                             
                                 outputSegment.UnsafeWrite((char)lowSurrogate);
                                 // add (previously matched input length) + (this match length) - (substitution length)
                                 cumulativeDiff += inputSegment.Length + YyLength - 2;
