@@ -63,9 +63,7 @@ namespace Lucene.Net.Store
         public override long Length
         {
             get => @delegate.Length;
-            set
-            {
-            }
+            set => @delegate.Length = value ;
         }
 
         [Obsolete("(4.1) this method will be removed in Lucene 5.0")]

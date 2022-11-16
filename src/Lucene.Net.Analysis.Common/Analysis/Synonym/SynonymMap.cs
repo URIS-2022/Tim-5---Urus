@@ -170,7 +170,8 @@ namespace Lucene.Net.Analysis.Synonym
                 }
                 if (output.Length <= 0)
                 {
-                    throw new ArgumentOutOfRangeException(nameof(output.Length), "output.Length must be > 0 (got " + output.Length + ")"); // LUCENENET specific - changed from IllegalArgumentException to ArgumentOutOfRangeException (.NET convention)
+                    throw new ArgumentOutOfRangeException(nameof(output.Length),
+                                                          "output.Length must be > 0 (got " + output.Length + ")"); // LUCENENET specific - changed from IllegalArgumentException to ArgumentOutOfRangeException (.NET convention)
                 }
 
                 if (Debugging.AssertsEnabled)

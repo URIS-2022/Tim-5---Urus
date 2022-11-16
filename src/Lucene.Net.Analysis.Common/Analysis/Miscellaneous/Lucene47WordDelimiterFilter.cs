@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using System;
 using System.Text;
 using Lucene.Net.Analysis.TokenAttributes;
@@ -27,7 +27,7 @@ namespace Lucene.Net.Analysis.Miscellaneous
     /// <summary>
     /// Old Broken version of <see cref="WordDelimiterFilter"/>
     /// </summary>
-    [Obsolete]
+    [Obsolete ("Lucene47WordDelimiterFilter")]
     public sealed class Lucene47WordDelimiterFilter : TokenFilter
     {
         public const int LOWER = 0x01;

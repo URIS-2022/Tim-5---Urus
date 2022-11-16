@@ -193,6 +193,8 @@ namespace Lucene.Net.Analysis.NGram
             int minGram = TestUtil.NextInt32(Random, 1, 100);
             int maxGram = TestUtil.NextInt32(Random, minGram, 100);
             TestNGrams(minGram, maxGram, TestUtil.NextInt32(Random, 3 * 1024, 4 * 1024), "");
+            Assert.IsNotNull(minGram);
+            Assert.IsNotNull(maxGram);
         }
 
         [Test]

@@ -56,7 +56,7 @@ namespace Lucene.Net.Analysis.CharFilters
             }
         }
 
-        // TODO: this should use inputstreams from the loader, not File!
+        
         public virtual void Inform(IResourceLoader loader)
         {
             if (mapping != null)
