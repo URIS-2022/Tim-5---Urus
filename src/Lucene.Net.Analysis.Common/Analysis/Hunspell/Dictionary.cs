@@ -705,7 +705,7 @@ namespace Lucene.Net.Analysis.Hunspell
         internal static string GetDictionaryEncoding(Stream affix)
         {
             StringBuilder encoding = new StringBuilder();
-            for (;;)
+            while(true)
             {
                 encoding.Length = 0;
                 int ch;

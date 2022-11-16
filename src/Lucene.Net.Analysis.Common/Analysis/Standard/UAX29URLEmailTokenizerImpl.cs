@@ -700,7 +700,7 @@ namespace Lucene.Net.Analysis.Standard
             return result;
         }
 
-        private static int ZzUnpackRowMap(string packed, int offset, int[] result)
+        public static void ZzUnpackRowMap(string packed, int offset, int[] result)
         {
             int i = 0;  /* index in packed string  */
             int j = offset;  /* index in unpacked array */
@@ -710,7 +710,7 @@ namespace Lucene.Net.Analysis.Standard
                 int high = packed[i++] << 16;
                 result[j++] = high | packed[i++];
             }
-            return j;
+            return;
         }
 
         /// <summary>
