@@ -565,7 +565,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language.Bm
             bool startsWith = regex.StartsWith("^", StringComparison.Ordinal);
             bool endsWith = regex.EndsWith("$", StringComparison.Ordinal);
             string content = regex.Substring(startsWith ? 1 : 0, (endsWith ? regex.Length - 1 : regex.Length) - (startsWith ? 1 : 0));
-            bool boxes = content.Contains("[");
+            bool boxes = content.Contains('[');
 
             if (!boxes)
             {
