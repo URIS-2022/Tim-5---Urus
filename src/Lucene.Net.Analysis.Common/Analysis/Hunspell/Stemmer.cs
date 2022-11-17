@@ -610,7 +610,7 @@ namespace Lucene.Net.Analysis.Hunspell
         /// <returns> <see cref="IList{CharsRef}"/> of stems for the word, or an empty list if none are found </returns>
         internal IList<CharsRef> ApplyAffix(char[] strippedWord, int length, int affix, int prefixFlag, int recursionDepth, bool prefix, bool circumfix, bool caseVariant)
         {
-            // TODO: just pass this in from before, no need to decode it twice
+            
             affixReader.Position = 8 * affix;
             char flag = (char)(affixReader.ReadInt16() & 0xffff);
             affixReader.SkipBytes(2); // strip

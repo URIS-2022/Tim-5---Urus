@@ -167,7 +167,7 @@ namespace Lucene.Net.Benchmarks.Utils
             else
             {
                 // LUCENENET specific - our wrapper console shows correct usage
-                throw new ArgumentException();
+                throw new ArgumentException("Message");
                 //PrintUsage();
             }
         }

@@ -30693,7 +30693,7 @@ namespace Lucene.Net.Analysis.CharFilters
         private int inputStart;
         private int cumulativeDiff;
         private bool escapeBR = false;
-        private bool escapeSCRIPT = false;
+        private readonly bool escapeSCRIPT = false;
         private readonly bool escapeSTYLE = false;
         private int restoreState;
         private int previousRestoreState;

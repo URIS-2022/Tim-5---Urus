@@ -827,7 +827,7 @@ namespace Lucene.Net.Analysis.Hunspell
 
         internal const char FLAG_SEPARATOR = (char)0x1f; // flag separator after escaping
         internal const char MORPH_SEPARATOR = (char)0x1e; // separator for boundary of entry (may be followed by morph data)
-
+        //Sergej
         internal virtual string UnescapeEntry(string entry)
         {
             StringBuilder sb = new StringBuilder();
