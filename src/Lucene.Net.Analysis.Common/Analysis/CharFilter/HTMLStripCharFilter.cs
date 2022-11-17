@@ -30964,19 +30964,7 @@ namespace Lucene.Net.Analysis.CharFilters
         /// Internal scan buffer is resized down to its initial length, if it has grown.
         /// </summary>
         /// <param name="reader">the new input stream</param>
-        private void YyReset(BufferedCharFilter reader)
-        {
-            zzReader = reader;
-            //zzAtBOL = true; // LUCENENET: Never read
-            zzAtEOF = false;
-            zzEOFDone = false;
-            zzEndRead = zzStartRead = 0;
-            zzCurrentPos = zzMarkedPos = 0;
-            //yyline = yychar = yycolumn = 0; // LUCENENET: Never read
-            zzLexicalState = YYINITIAL;
-            if (zzBuffer.Length > ZZ_BUFFERSIZE)
-                zzBuffer = new char[ZZ_BUFFERSIZE];
-        }
+        
 
 
         /// <summary>
