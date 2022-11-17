@@ -346,7 +346,7 @@ namespace Lucene.Net.Codecs.Memory
                     }
                     else
                     {
-                        _statsOut.WriteVInt32(stats.DocFreq << 1 | 0);
+                        _statsOut.WriteVInt32(stats.DocFreq << 1);
                         _statsOut.WriteVInt64(stats.TotalTermFreq - stats.DocFreq);
                     }
                 }

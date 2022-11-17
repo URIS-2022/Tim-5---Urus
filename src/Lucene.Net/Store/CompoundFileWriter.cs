@@ -271,7 +271,8 @@ namespace Lucene.Net.Store
                 seenIDs.Add(id);
                 DirectCFSIndexOutput @out;
 
-                if ((outputLocked = outputTaken.CompareAndSet(false, true)))
+                outputLocked = outputTaken.CompareAndSet(false, true);
+                if (outputLocked)
                 {
                     @out = new DirectCFSIndexOutput(this, GetOutput(), entry, false);
                 }
