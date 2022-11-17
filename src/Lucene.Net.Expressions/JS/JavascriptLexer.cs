@@ -357,8 +357,7 @@ namespace Lucene.Net.Expressions.JS
         /// <exception cref="Antlr.Runtime.RecognitionException"></exception>
         public void MAT_BOOL_NOT()
         {
-            try
-            {
+            
                 int _type = AT_BOOL_NOT;
                 int _channel = TokenChannels.Default;
                 {
@@ -368,10 +367,8 @@ namespace Lucene.Net.Expressions.JS
                 }
                 state.type = _type;
                 state.channel = _channel;
-            }
-            finally
-            {
-            }
+            
+            
         }
 
         // do for sure before leaving

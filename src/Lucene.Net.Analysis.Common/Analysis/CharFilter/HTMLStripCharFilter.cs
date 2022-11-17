@@ -31128,6 +31128,11 @@ namespace Lucene.Net.Analysis.CharFilters
             }
         }
 
+        private int metoda()
+        {
+            return eofReturnValue;
+        }
+
         /// <summary>
         /// Resumes scanning until the next regular expression is matched,
         /// the end of input is encountered or an I/O-Error occurs.
@@ -31973,9 +31978,7 @@ namespace Lucene.Net.Analysis.CharFilters
                         {
                             zzAtEOF = true;
                             ZzDoEOF();
-                            {
-                                return eofReturnValue;
-                            }
+                            metoda();
                         }
                         else
                         {

@@ -616,6 +616,9 @@ namespace Lucene.Net.Analysis.CharFilters
             int minWordLength = 3;
             int maxWordLength = 20;
             int numWords = TestUtil.NextInt32(Random, minNumWords, maxNumWords);
+
+            Assert.IsNotNull(text);
+
             switch (TestUtil.NextInt32(Random, 0, 4))
             {
                 case 0:

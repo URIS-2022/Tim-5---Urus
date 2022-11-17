@@ -793,7 +793,7 @@ namespace Lucene.Net.Codecs.BlockTerms
                     //System.out.println("BTR.seekExact termState target=" + target.utf8ToString() + " " + target + " this=" + this);
                     if (Debugging.AssertsEnabled)
                     {
-                        Debugging.Assert(otherState != null && otherState is BlockTermState);
+                        Debugging.Assert(otherState is BlockTermState);
                         Debugging.Assert(!doOrd || ((BlockTermState)otherState).Ord < outerInstance.numTerms);
                     }
                     state.CopyFrom(otherState);

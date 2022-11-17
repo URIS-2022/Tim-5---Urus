@@ -45,6 +45,7 @@ namespace Lucene.Net.Benchmarks.ByTask
     /// </remarks>
     public class Benchmark
     {
+        private const string ParamName = "Exception.";
         private readonly PerfRunData runData; // LUCENENET: marked readonly
         private readonly Algorithm algorithm; // LUCENENET: marked readonly
         private bool executed;
@@ -115,7 +116,7 @@ namespace Lucene.Net.Benchmarks.ByTask
             if (args.Length < 1)
             {
                 // LUCENENET specific - usage info printed by our wrapper console
-                throw new ArgumentException(nameof(ex), "Exception.");
+                throw new ArgumentException(nameof(ex), ParamName);
                 //Console.WriteLine("Usage: java Benchmark <algorithm file>");
                 //Environment.Exit(1);
             }
