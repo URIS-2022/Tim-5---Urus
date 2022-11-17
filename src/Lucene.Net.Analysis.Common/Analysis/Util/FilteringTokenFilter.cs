@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Analysis.TokenAttributes;
 using Lucene.Net.Util;
 using System;
@@ -59,7 +59,7 @@ namespace Lucene.Net.Analysis.Util
         /// <param name="input">                    the input to consume </param>
         /// @deprecated enablePositionIncrements=false is not supported anymore as of Lucene 4.4 
         [Obsolete("enablePositionIncrements=false is not supported anymore as of Lucene 4.4")]
-        public FilteringTokenFilter(Lucene.Net.Util.LuceneVersion version, bool enablePositionIncrements, TokenStream input)
+        protected FilteringTokenFilter(Lucene.Net.Util.LuceneVersion version, bool enablePositionIncrements, TokenStream input)
             : this(version, input)
         {
             CheckPositionIncrement(version, enablePositionIncrements);

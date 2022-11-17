@@ -27,7 +27,7 @@ namespace Lucene.Net.Analysis.Cn.Smart
     {
         public static readonly char[] STRING_CHAR_ARRAY = "未##串".ToCharArray();
 
-        public static readonly char[] NUMBER_CHAR_ARRAY = "未##数".ToCharArray();
+        public static char[] NUMBER_CHAR_ARRAY = "未##数".ToCharArray();
 
         public static readonly char[] START_CHAR_ARRAY = "始##始".ToCharArray();
 

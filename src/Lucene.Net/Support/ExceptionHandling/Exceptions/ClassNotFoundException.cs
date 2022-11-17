@@ -49,7 +49,7 @@ namespace Lucene
 #if FEATURE_SERIALIZABLE_EXCEPTIONS
     [Serializable]
 #endif
-    internal class ClassNotFoundException : Exception
+    public class ClassNotFoundException : Exception
     {
         [Obsolete("Use ClassNotFoundException.Create() instead.", error: true)]
         public ClassNotFoundException()

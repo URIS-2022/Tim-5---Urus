@@ -67,7 +67,7 @@ namespace Lucene.Net.Queries.Function
 
         public override int NextDoc()
         {
-            for (; ; )
+            while (true)
             {
                 doc++;
                 if (doc >= m_maxDoc)
