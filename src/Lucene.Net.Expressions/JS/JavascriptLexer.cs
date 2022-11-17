@@ -165,6 +165,8 @@ namespace Lucene.Net.Expressions.JS
             }
             finally
             {
+                Console.WriteLine(state.channel);
+                Console.WriteLine(state.type);
             }
             
         }
@@ -1315,7 +1317,7 @@ loop2_break: {/* LUCENENET: intentionally blank */}
                 }
                 else
                 {
-                    if (((LA14_0 >= '1' && LA14_0 <= '9')))
+                    if (LA14_0 >= '1' && LA14_0 <= '9')
                     {
                         alt14 = 2;
                     }
