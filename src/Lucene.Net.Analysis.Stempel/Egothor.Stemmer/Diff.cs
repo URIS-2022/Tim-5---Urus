@@ -264,7 +264,7 @@ namespace Egothor.Stemmer
             char @base = (char)('a' - 1);
             char deletes = @base;
             char equals = @base;
-            for (x = maxx - 1, y = maxy - 1; x + y != 0;)
+            while (x + y != 0)
             {
                 switch (way[x][y])
                 {

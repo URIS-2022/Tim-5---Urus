@@ -30,6 +30,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  */
 
+using System;
+
 namespace Lucene.Net.Tartarus.Snowball.Ext
 {
     /// <summary>
@@ -636,7 +638,7 @@ namespace Lucene.Net.Tartarus.Snowball.Ext
                 lab1:
                 m_cursor = v_1;
                 goto replab0;
-                end_of_outer_loop: { }
+                end_of_outer_loop: { Console.WriteLine("end"); }
             }
             replab0:
             return true;

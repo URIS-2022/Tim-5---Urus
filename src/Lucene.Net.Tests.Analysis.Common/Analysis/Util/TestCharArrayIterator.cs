@@ -81,6 +81,7 @@ namespace Lucene.Net.Analysis.Util
                 var text = TestUtil.RandomUnicodeString(Random).toCharArray();
                 ci.SetText(text, 0, text.Length);
                 Consume(bi, ci);
+                Assert.IsNotNull(text);
             }
         }
 

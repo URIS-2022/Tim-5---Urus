@@ -398,8 +398,8 @@ namespace Lucene.Net.Util
             }
             //}
 
-            Assert.IsFalse(names.Any(), names.Count() + " members that accept or return List<T> or Dictionary<K, V> detected. " +
-                "These should be changed to IList<T> and IDictionary<K, V>, respectively.");
+            Assert.IsFalse(names.Any(), "{0} members that accept or return List<T> or Dictionary<K, V> detected. " +
+                "These should be changed to IList<T> and IDictionary<K, V>, respectively.", names.Count);
         }
 
         private static IEnumerable<string> GetInvalidPrivateFields(Assembly assembly, string exceptionRegex)

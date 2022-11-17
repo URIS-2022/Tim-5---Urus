@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using Lucene.Net.Support;
 using System;
 using System.Diagnostics.CodeAnalysis;
@@ -127,7 +127,8 @@ namespace Lucene.Net.Analysis.Compound.Hyphenation
 
         // LUCENENET NOTE: Not needed (replaced with this[])
         //public virtual void Put(int index, char val)
-        //{
+        
+        
         //    array[index] = val;
         //}
 

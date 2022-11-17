@@ -125,7 +125,7 @@ namespace Lucene.Net.Codecs.Lucene3x
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public void Dispose()
+        public void Dispose2()
         {
             Dispose(true);
             GC.SuppressFinalize(this);

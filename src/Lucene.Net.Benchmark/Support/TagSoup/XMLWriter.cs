@@ -1456,7 +1456,7 @@ namespace TagSoup
                 Write(prefix);
                 Write(':');
             }
-            if (localName != null && !"".Equals(localName, StringComparison.Ordinal))
+            if (localName != null && !string.IsNullOrEmpty(localName))
             {
                 Write(localName);
             }

@@ -1,5 +1,6 @@
 ﻿using Lucene.Net.Support;
 using System.Collections.Generic;
+using System.Linq;
 using JCG = J2N.Collections.Generic;
 
 /*

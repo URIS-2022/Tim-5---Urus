@@ -222,7 +222,7 @@ namespace Lucene.Net.Codecs.SimpleText
                     return null;
                 }
 
-                if (reuse is null || !(reuse is SimpleTextDocsAndPositionsEnum docsAndPositionsEnum) || !docsAndPositionsEnum.CanReuse(outerInstance.input))
+                if (!(reuse is SimpleTextDocsAndPositionsEnum docsAndPositionsEnum) || !docsAndPositionsEnum.CanReuse(outerInstance.input))
                     docsAndPositionsEnum = new SimpleTextDocsAndPositionsEnum(outerInstance);
 
                 return docsAndPositionsEnum.Reset(docsStart, liveDocs, indexOptions, docFreq);

@@ -318,7 +318,7 @@ namespace Lucene.Net.Analysis.Phonetic.Language
                         continue; // empty lines can be safely skipped
                     }
 
-                    if (line.Contains("="))
+                    if (line.Contains('='))
                     {
                         // folding
                         string[] parts = line.Split('=').TrimEnd();
