@@ -1,4 +1,4 @@
-// Lucene version compatibility level 4.8.1
+﻿// Lucene version compatibility level 4.8.1
 using System;
 using Lucene.Net.Analysis.TokenAttributes;
 using Lucene.Net.Util;
@@ -84,6 +84,7 @@ namespace Lucene.Net.Analysis.Miscellaneous
             // eat the first characters
             for (start = 0; start < len && char.IsWhiteSpace(termBuffer[start]); start++)
             {
+                --start;
             }
             // eat the end characters
             for (end = len; end >= start && char.IsWhiteSpace(termBuffer[end - 1]); end--)

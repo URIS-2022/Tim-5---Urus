@@ -31184,7 +31184,7 @@ namespace Lucene.Net.Analysis.CharFilters
                     else if (zzAtEOF)
                     {
                         zzInput = YYEOF;
-                        goto zzForActionBreak;
+                        
                     }
                     else
                     {
