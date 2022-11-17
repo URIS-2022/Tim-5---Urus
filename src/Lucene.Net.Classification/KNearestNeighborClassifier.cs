@@ -92,7 +92,7 @@ namespace Lucene.Net.Classification
 
         private ClassificationResult<BytesRef> SelectClassFromNeighbors(TopDocs topDocs)
         {
-            // TODO : improve the nearest neighbor selection
+            
             Dictionary<BytesRef, int> classCounts = new Dictionary<BytesRef, int>();
 
             foreach (ScoreDoc scoreDoc in topDocs.ScoreDocs)

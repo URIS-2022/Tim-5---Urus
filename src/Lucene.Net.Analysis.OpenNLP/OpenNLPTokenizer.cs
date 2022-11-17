@@ -32,7 +32,7 @@ namespace Lucene.Net.Analysis.OpenNlp
     /// </summary>
     public sealed class OpenNLPTokenizer : SegmentingTokenizerBase
     {
-        public static int EOS_FLAG_BIT = 1;
+        public const int EOS_FLAG_BIT = 1;
 
         private readonly ICharTermAttribute termAtt;
         private readonly IFlagsAttribute flagsAtt;

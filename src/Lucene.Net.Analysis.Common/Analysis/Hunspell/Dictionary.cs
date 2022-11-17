@@ -635,7 +635,7 @@ namespace Lucene.Net.Analysis.Hunspell
                 affixWriter.WriteInt16((short)flag);
                 affixWriter.WriteInt16((short)stripOrd);
                 // encode crossProduct into patternIndex
-                int patternOrd = (int)patternIndex << 1 | (crossProduct ? 1 : 0);
+                int patternOrd = patternIndex << 1 | (crossProduct ? 1 : 0);
                 affixWriter.WriteInt16((short)patternOrd);
                 affixWriter.WriteInt16((short)appendFlagsOrd);
 
@@ -1293,7 +1293,7 @@ namespace Lucene.Net.Analysis.Hunspell
         /// Simple implementation of <see cref="FlagParsingStrategy"/> that treats the chars in each <see cref="string"/> as a individual flags.
         /// Can be used with both the ASCII and UTF-8 flag types.
         /// </summary>
-        private class SimpleFlagParsingStrategy : FlagParsingStrategy
+        private sealed class SimpleFlagParsingStrategy : FlagParsingStrategy
         {
             internal override char[] ParseFlags(string rawFlags)
             {

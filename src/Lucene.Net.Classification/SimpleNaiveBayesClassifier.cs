@@ -141,7 +141,7 @@ namespace Lucene.Net.Classification
         /// </summary>
         /// <param name="inputDocument">a string containing text to be classified</param>
         /// <returns>a <see cref="ClassificationResult{BytesRef}"/> holding assigned class of type <see cref="BytesRef"/> and score</returns>
-        public virtual ClassificationResult<BytesRef> AssignClass(string inputDocument) 
+        public virtual ClassificationResult<BytesRef> AssignClass(string text) 
         {
             if (atomicReader is null) 
             {
@@ -153,7 +153,7 @@ namespace Lucene.Net.Classification
             Terms terms = MultiFields.GetTerms(atomicReader, classFieldName);
             TermsEnum termsEnum = terms.GetEnumerator();
             BytesRef next;
-            string[] tokenizedDoc = TokenizeDoc(inputDocument);
+            string[] tokenizedDoc = TokenizeDoc(text);
             while (termsEnum.MoveNext()) 
             {
                 next = termsEnum.Term;

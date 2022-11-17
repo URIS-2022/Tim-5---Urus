@@ -138,7 +138,7 @@ namespace Lucene.Net.Benchmarks.ByTask.Feeds
                     continue;
                 }
 
-                var _ = line.Length;
+                
 
                 if (lineStart != null && line.StartsWith(lineStart, StringComparison.Ordinal))
                 {

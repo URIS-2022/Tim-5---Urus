@@ -172,7 +172,7 @@ namespace Lucene.Net.Analysis.Pattern
                         }
                     }
 
-                } while ((m = m.NextMatch()).Success);
+                } while ((m.NextMatch()).Success);
 
                 // Append the remaining output, no further changes to indices.
 #if FEATURE_STRINGBUILDER_APPEND_READONLYSPAN
