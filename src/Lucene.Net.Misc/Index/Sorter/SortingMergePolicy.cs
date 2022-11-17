@@ -95,8 +95,8 @@ namespace Lucene.Net.Index.Sorter
                 get => base.info; // LUCENENET specific: added getter
                 set
                 {
-                    IDictionary<string, string> diagnostics = value.Info.Diagnostics;
-                    diagnostics[SORTER_ID_PROP] = outerInstance.sorter.ID;
+                    /*IDictionary<string, string> diagnostics = value.Info.Diagnostics;
+                    diagnostics[SORTER_ID_PROP] = outerInstance.sorter.ID;*/
                     base.Info = value;
                 }
             }

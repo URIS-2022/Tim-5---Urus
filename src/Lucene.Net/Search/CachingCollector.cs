@@ -396,6 +396,7 @@ namespace Lucene.Net.Search
 
             public void Collect(int doc)
             {
+                //Method Collect do nothing
             }
 
             public void SetNextReader(AtomicReaderContext context)
