@@ -62,6 +62,7 @@ namespace Lucene.Net.Analysis.OpenNlp
 
             // Comment 1
             // Comment 2
+            // Comment 3
             if (args.Count > 0)
             {
                 throw new ArgumentException(string.Format(J2N.Text.StringFormatter.CurrentCulture, "Unknown parameters: {0}", args));
