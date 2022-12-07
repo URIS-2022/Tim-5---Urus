@@ -60,6 +60,7 @@ namespace Lucene.Net.Analysis.OpenNlp
                     + DICTIONARY + "' and '" + LEMMATIZER_MODEL + "' must be provided.");
             }
 
+            // Comment 1
             if (args.Count > 0)
             {
                 throw new ArgumentException(string.Format(J2N.Text.StringFormatter.CurrentCulture, "Unknown parameters: {0}", args));
